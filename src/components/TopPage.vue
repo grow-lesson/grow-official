@@ -1,85 +1,72 @@
 <template>
-  <div>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <h1>Welcome to Our Company</h1>
-        <p>Delivering Quality Services Since 20XX</p>
-      </section>
-      <section>
-        <h2>About Us</h2>
-        <p>We are a leading company in...</p>
-      </section>
-      <section>
-        <h2>Our Services</h2>
-        <ul>
-          <li>Service 1</li>
-          <li>Service 2</li>
-          <li>Service 3</li>
-        </ul>
-      </section>
-      <!-- 他のセクションを追加 -->
+  <div class="wrap">
+    <Header />
+    <main class="main">
+      <div class="top-contents">
+        <section class="top-philosophy">
+          <p class="top-philosophy-title">企業理念のスペースだよ</p>
+        </section>
+        <section class="top-company">
+          <p class="top-company-title">会社概要・事業内容のスペースだよ</p>
+        </section>
+        <section class="top-employee">
+          <p class="top-employee-title">社員紹介のスペースだよ</p>
+        </section>
+        <section class="top-accomplishment">
+          <p class="top-accomplishment-title">案件実績のスペースだよ</p>
+        </section>
+        <section class="top-contact">
+          <p class="top-contact-title">お問い合わせのスペースだよ</p>
+        </section>
+      </div>
+      <Footer />
     </main>
-    <footer>
-      <p>&copy; 2023 Our Company. All rights reserved.</p>
-    </footer>
   </div>
 </template>
 
 <script>
+import Header from "@/components/common/SideHeader.vue";
+import Footer from "@/components/common/Footer.vue";
+
 export default {
-  // コンポーネントの定義
+  name: "TopPage",
+  components: {
+    Header,
+    Footer,
+  },
 };
 </script>
 
 <style>
-/* スタイルを追加 */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 1em;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+.wrap {
   display: flex;
 }
-
-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 1em;
+.main {
+  width: 50%;
 }
-
-main {
-  padding: 2em;
+.top-philosophy {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(191, 242, 116);
 }
-
-.hero {
-  background-color: #ddd;
-  padding: 2em;
-  text-align: center;
+.top-company {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(243, 172, 81);
 }
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1em;
+.top-employee {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(234, 111, 150);
+}
+.top-accomplishment {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(118, 108, 185);
+}
+.top-contact {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(151, 156, 143);
 }
 </style>
