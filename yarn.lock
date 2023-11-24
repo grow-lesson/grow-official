@@ -2807,6 +2807,11 @@
   "resolved" "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
   "version" "1.2.0"
 
+"destyle.css@^4.0.0":
+  "integrity" "sha512-yE2SpDRZdqfEZRkYSIxSWSuh4Higsm01VinAWC3hny9DDV+NjBARpCEqf6TLDTWka1I7pu4bDJ68aF1WjLPKUw=="
+  "resolved" "https://registry.npmjs.org/destyle.css/-/destyle.css-4.0.0.tgz"
+  "version" "4.0.0"
+
 "detect-node@^2.0.4":
   "integrity" "sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g=="
   "resolved" "https://registry.npmjs.org/detect-node/-/detect-node-2.1.0.tgz"
@@ -4464,6 +4469,11 @@
   "integrity" "sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A=="
   "resolved" "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz"
   "version" "6.1.0"
+
+"normalize.css@^8.0.1":
+  "integrity" "sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg=="
+  "resolved" "https://registry.npmjs.org/normalize.css/-/normalize.css-8.0.1.tgz"
+  "version" "8.0.1"
 
 "npm-run-path@^2.0.0":
   "integrity" "sha512-lJxZYlT4DW/bRUtFh1MQIWqmLwQfAxnqWG4HhEdjMlkrJYnJn0Jrr2u3mgxqaWsdiBc76TYkTG/mhrnYTuzfHw=="

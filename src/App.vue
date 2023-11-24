@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import "normalize.css";
+import "destyle.css";
 
 export default {
   name: "App",
