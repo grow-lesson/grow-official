@@ -108,7 +108,7 @@ export default {
 }
 
 .p-employeeDetail__heading {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 30px;
@@ -118,9 +118,9 @@ export default {
 .p-employeeDetail__heading::before {
   content: "EMPLOYEE";
   position: absolute;
-  right: -150px;
-  top: -13px;
-  font-size: 26px;
+  right: -170px;
+  top: -18px;
+  font-size: 30px;
   font-weight: bold;
   color: #bfbebe;
   letter-spacing: 0.05em;
@@ -180,7 +180,7 @@ export default {
 }
 .p-employeeDetail-Career__tag {
   background-color: #e0dede;
-  padding: 2px 7px;
+  padding: 2px30px;
   font-size: 12px;
   border-radius: 5px;
   font-weight: bold;

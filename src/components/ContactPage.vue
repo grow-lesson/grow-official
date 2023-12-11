@@ -75,7 +75,7 @@ export default {
 }
 
 .p-contact__heading {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 30px;
@@ -85,9 +85,9 @@ export default {
 .p-contact__heading::before {
   content: "CONTACT";
   position: absolute;
-  right: -130px;
-  top: -13px;
-  font-size: 26px;
+  right: -150px;
+  top: -19px;
+  font-size: 30px;
   font-weight: bold;
   color: #bfbebe;
   letter-spacing: 0.05em;
@@ -96,6 +96,7 @@ export default {
 
 .p-contact__submit {
   text-align: center;
+  margin-top: 20px;
 }
 
 form {
@@ -118,14 +119,14 @@ input[type="email"],
 input[type="tel"],
 textarea {
   width: 100%;
-  padding: 4px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 3px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 7px;
 }
 
 textarea {
-  height: 300px;
+  height: 250px;
 }
 
 button {
