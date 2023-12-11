@@ -4,6 +4,7 @@
     <main class="main">
       <section class="contact">
         <p class="contact-title">お問い合わせのページだよ</p>
+        <p class="contact-title">お問い合わせのページだよ</p>
       </section>
       <Footer />
     </main>
