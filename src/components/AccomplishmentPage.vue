@@ -3,7 +3,209 @@
     <Header />
     <main class="main">
       <section class="accomplishment">
-        <p class="accomplishment-title">案件実績のページだよ</p>
+        <div class="heading">
+          <h2 class="heading-title">実績</h2>
+          <div class="heading-engTitle">ACHIEVEMENTS</div>
+        </div>
+        <div class="accomplishment-content">
+          <ul>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article>
+                <div class="accomplishment-flex">
+                  <div class="accomplishment-img"></div>
+                  <div class="accomplishment-block">
+                    <p>2023.01</p>
+                    <p>
+                      てすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすとてすと
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
       <Footer />
     </main>
@@ -26,13 +228,55 @@ export default {
 <style>
 .wrap {
   display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 .main {
-  width: 50%;
+  overflow: scroll;
 }
 .accomplishment {
-  width: 100%;
-  height: 500px;
-  background-color: rgb(191, 242, 116);
+  width: 445px;
+  position: relative;
+  background-color: aliceblue;
+  padding: 50px 10px;
+}
+.heading {
+  position: relative;
+  text-align: center;
+  padding: 24px 0;
+}
+.heading-title {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.heading-engTitle {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.2;
+}
+.accomplishment-flex {
+  display: flex;
+  margin-top: 24px;
+}
+.accomplishment-img {
+  width: 230px;
+  border: 1px #aaa solid;
+  background-color: white;
+}
+.accomplishment-block {
+  padding: 15px 10px;
+  width: 300px;
+  background-color: gainsboro;
+}
+.accomplishment-block p {
+  font-size: 11px;
+}
+.accomplishment-block p:nth-child(2) {
+  margin-top: 20px;
 }
 </style>
