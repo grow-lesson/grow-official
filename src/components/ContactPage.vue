@@ -4,7 +4,7 @@
     <main class="main">
       <section class="p-contact">
         <div class="p-contact__inner">
-          <h2 class="p-contact__title">お問い合わせ</h2>
+          <h2 class="p-contact__heading">お問い合わせ</h2>
           <form action="" method="post">
             <div class="p-contact__box">
               <label for="name">お名前</label>
@@ -53,7 +53,7 @@ export default {
 <style>
 .wrap {
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 .main {
@@ -74,7 +74,7 @@ export default {
   padding: 40px 20px;
 }
 
-.p-contact__title {
+.p-contact__heading {
   font-size: 18px;
   font-weight: bold;
   display: inline-block;
@@ -82,7 +82,7 @@ export default {
   position: relative;
   z-index: 2;
 }
-.p-contact__title::before {
+.p-contact__heading::before {
   content: "CONTACT";
   position: absolute;
   right: -130px;
