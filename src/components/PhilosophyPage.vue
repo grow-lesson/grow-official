@@ -27,6 +27,8 @@
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 
+
+
 export default {
   name: "PhilosophyPage",
   components: {
