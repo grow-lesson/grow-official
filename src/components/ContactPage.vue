@@ -119,7 +119,7 @@ input[type="email"],
 input[type="tel"],
 textarea {
   width: 100%;
-  padding: 3px;
+  padding: 3px 10px;
   margin-bottom: 10px;
   border: 1px solid #000;
   border-radius: 7px;
