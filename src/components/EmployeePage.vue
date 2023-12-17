@@ -90,6 +90,13 @@
             </li>
             <li class="pageNation-item">
               <button class="pageNation-button">
+                <div class="pageNation-numberBox">
+                  <p class="pageNation-number">02</p>
+                </div>
+              </button>
+            </li>
+            <li class="pageNation-item">
+              <button class="pageNation-button">
               <div class="pageNation-next"></div>
               </button>
             </li>
