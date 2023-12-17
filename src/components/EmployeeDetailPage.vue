@@ -180,7 +180,7 @@ export default {
 }
 .p-employeeDetail-Career__tag {
   background-color: #e0dede;
-  padding: 2px30px;
+  padding: 2px 30px;
   font-size: 12px;
   border-radius: 5px;
   font-weight: bold;
