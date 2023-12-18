@@ -1,6 +1,9 @@
 <template>
   <header class="header">
     <div class="header-container">
+      <div class="header-logoWrap">
+      <img src="./../../assets/growlogo.png">
+      </div>
       <nav class="header-nav">
         <ul class="header-list">
           <li class="header-item"><a @click="goToTopPage" class="header-link">Top</a></li>
@@ -98,13 +101,21 @@ export default {
   width: 555px;
 }
 .header-container {
+  position: fixed;
+  width: 555px;
   height: 100%;
   background-color: #2c3e50;
-  padding: 170px 20px 20px;
-  display: flex;
-  justify-content: center;
+  padding: 80px 70px 0;
 }
-
+.header-logoWrap {
+  width: 180px;
+}
+.header-logoWrap img{
+  width: 100%;
+}
+.header-nav {
+  margin-top: 40px;
+}
 .header-list {
   display: grid;
   grid-template-rows: repeat(3,1fr);
