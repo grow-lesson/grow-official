@@ -56,20 +56,20 @@
           </div>
         </div>
       </section>
-      <!-- <Footer /> -->
+      <Footer />
     </main>
   </div>
 </template>
 
 <script>
 import Header from "@/components/common/SideHeader.vue";
-// import Footer from "@/components/common/Footer.vue";
+import Footer from "@/components/common/Footer.vue";
 
 export default {
   name: "EmployeeDetailPage",
   components: {
     Header,
-    // Footer,
+    Footer,
   },
 };
 </script>
@@ -77,21 +77,28 @@ export default {
 <style>
 .wrap {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .main {
   width: 50%;
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+}
+
 .p-employeeDetail {
   width: 100%;
-  height: 100%;
-  background-color: rgb(191, 242, 116);
+  min-height: calc(100vh - 50px);
+  padding-bottom: 50px;
+  background-color: #fff;
 }
 
 .p-employeeDetail__inner {
-  max-width: 445px;
+  /* max-width: 445px; */
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -115,6 +122,7 @@ export default {
   position: relative;
   z-index: 2;
 }
+
 .p-employeeDetail__heading::before {
   content: "EMPLOYEE";
   position: absolute;
@@ -126,12 +134,14 @@ export default {
   letter-spacing: 0.05em;
   z-index: -1;
 }
+
 .p-employeeDetail__title {
   font-size: 24px;
   position: relative;
   margin-bottom: 50px;
   font-weight: 600;
 }
+
 .p-employeeDetail__title::after {
   content: "Takahashi Yuki";
   position: absolute;
@@ -142,42 +152,51 @@ export default {
   font-weight: bold;
   color: #000;
 }
+
 .p-employeeDetail__post {
   color: #000;
   font-size: 14px;
   font-weight: bold;
 }
+
 .p-employeeDetail__text {
   color: #000;
   font-size: 14px;
   padding: 0 10px;
   margin-top: 5px;
 }
+
 .p-employeeDetail-Career__title {
   color: #000;
   font-size: 14px;
   margin-top: 30px;
   font-weight: bold;
 }
+
 .p-employeeDetail-Career__item {
   padding: 10px 10px 20px;
 }
+
 .p-employeeDetail-Career__item:not(:last-child) {
   border-bottom: 1px solid;
 }
+
 .p-employeeDetail-Career__date {
   color: #000;
   font-size: 14px;
   line-height: 1;
 }
+
 .p-employeeDetail-Career__text {
   color: #000;
   font-size: 14px;
 }
+
 .p-employeeDetail-Career__tagBox {
   display: flex;
   gap: 5px;
 }
+
 .p-employeeDetail-Career__tag {
   background-color: #e0dede;
   padding: 2px 10px;
@@ -185,9 +204,11 @@ export default {
   border-radius: 5px;
   font-weight: bold;
 }
+
 .p-employeeDetail__backBtn {
   margin-top: 20px;
 }
+
 .p-employeeDetail__backBtn a {
   background-color: #000;
   padding: 7px 18px;
@@ -195,5 +216,12 @@ export default {
   border-radius: 3px;
   font-weight: bold;
   color: #fff;
+}
+
+footer {
+  height: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 </style>

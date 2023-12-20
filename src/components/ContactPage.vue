@@ -32,20 +32,20 @@
           </form>
         </div>
       </section>
-      <!-- <Footer /> -->
+      <Footer />
     </main>
   </div>
 </template>
 
 <script>
 import Header from "@/components/common/SideHeader.vue";
-// import Footer from "@/components/common/Footer.vue";
+import Footer from "@/components/common/Footer.vue";
 
 export default {
   name: "ContactPage",
   components: {
     Header,
-    // Footer,
+    Footer,
   },
 };
 </script>
@@ -53,21 +53,27 @@ export default {
 <style>
 .wrap {
   display: flex;
-  height: 100%;
 }
 
 .main {
   width: 50%;
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+}
+
 .p-contact {
   width: 100%;
-  height: 100%;
-  background-color: rgb(191, 242, 116);
+  min-height: calc(100vh - 50px);
+  padding-bottom: 50px;
+  background-color: #fff;
 }
 
 .p-contact__inner {
-  max-width: 445px;
+  /* max-width: 445px; */
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -82,6 +88,7 @@ export default {
   position: relative;
   z-index: 2;
 }
+
 .p-contact__heading::before {
   content: "CONTACT";
   position: absolute;
@@ -144,5 +151,12 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+footer {
+  height: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 </style>
