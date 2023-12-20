@@ -145,6 +145,13 @@ export default {
   width: 50%;
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+}
+
+
 .employee {
   width: 100%;
   padding: 60px 0;
