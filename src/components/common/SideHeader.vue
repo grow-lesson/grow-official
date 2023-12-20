@@ -1,33 +1,36 @@
 <template>
-  <header class="header">
-    <div class="header-container">
-      <div class="header-logoWrap">
-        <img src="./../../assets/growlogo.png">
+  <div>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-logoWrap">
+          <img src="./../../assets/growlogo.png">
+        </div>
+        <nav class="header-nav">
+          <ul class="header-list">
+            <li class="header-item"><a @click="goToTopPage" class="header-link">Top</a></li>
+            <li class="header-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
+            <li class="header-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
+            <li class="header-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
+            <li class="header-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li>
+            <li class="header-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-item"><a @click="goToTopPage" class="header-link">Top</a></li>
-          <li class="header-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
-          <li class="header-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
-          <li class="header-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
-          <li class="header-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li>
-          <li class="header-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
+    </header>
+    <div class="header-blank"></div>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <div class="menu-content">
+        <ul class="menu-list">
+          <li class="menu-item"><a @click="goToTopPage" class="header-link">Top</a></li>
+          <li class="menu-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
+          <li class="menu-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
+          <li class="menu-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
+          <li class="menu-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li>
+          <li class="menu-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-  <div class="hamburger-menu">
-    <input type="checkbox" id="menu-btn-check">
-    <label for="menu-btn-check" class="menu-btn"><span></span></label>
-    <div class="menu-content">
-      <ul class="menu-list">
-        <li class="menu-item"><a @click="goToTopPage" class="header-link">Top</a></li>
-        <li class="menu-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
-        <li class="menu-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
-        <li class="menu-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
-        <li class="menu-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li>
-        <li class="menu-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
-      </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -112,14 +115,18 @@ export default {
 
 <style scoped>
 .header {
+  position: fixed;
   width: 555px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #B0D3E1, #1B6D92);
+}
+
+.header-blank{
+  padding-left: 555px;
 }
 
 .header-container {
-  position: fixed;
   width: 555px;
-  height: 100%;
-  background-color: #2c3e50;
   padding: 80px 70px 0;
 }
 
@@ -147,7 +154,7 @@ export default {
 .header-item {
   width: 200px;
   font-size: 16px;
-  color: #bdc3c7;
+  color: #ffffff;
   margin-bottom: 20px;
   border-bottom: 1px solid #bdc3c7;
   cursor: pointer;
@@ -281,6 +288,9 @@ export default {
 
 @media (max-width: 1180px) {
   .header {
+    display: none;
+  }
+  .header-blank{
     display: none;
   }
 }
