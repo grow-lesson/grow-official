@@ -18,12 +18,17 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom, #B0D3E1, #1B6D92);
 }
 /* Global Styles */
 body {
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #2c3e50;
+}
+p {
+  font-size: 12px;
+}
+h1 {
+  font-size: large;
 }
 </style>
