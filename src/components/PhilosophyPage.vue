@@ -8,11 +8,6 @@
             <h1 class="philosophy__title">企業理念</h1>
             <h2 class="philosophy__subtitle">VISION</h2>
           </section>
-          <section class="philosophy__photo">
-            <div class="demoPhoto">
-              <img src="" class="philosophy__hero" alt="写真" />
-            </div>
-          </section>
           <section class="philosophy__txt">
             <p class="philosophy__text">
               <!-- #B0D3E1#1B6D92#27A7CC -->
@@ -28,13 +23,16 @@
               制作をこなすことで実務ベースでスキルが向上するとともに<br />
               インプットとアウトプットを素早く行うことで<br
                 class="br-sp"
-              />習得したことを確実に定着させます。<br /><br />
-              <span style="color: #27a7cc"
-                >・物事を前向きに捉える<br />・相手の立場に立って考える<br />・他者の考えを尊重し、手を取り合って物事を進めていく</span
-              ><br />
+              />習得したことを確実に定着させます。
+            </p>
+            <br /><br />
+            <p class="philosophy__text--block">
+              ・物事を前向きに捉える<br />・相手の立場に立って考える<br />・他者の考えを尊重し、手を取り合って物事を進めていく
+            </p>
+            <p class="philosophy__text philosophy__text2">
               このような視点や人との向き合い方が豊かで<br
                 class="br-sp"
-              />誇りある人生の実現に必要であると考えております。<br /><br />
+              />誇りある人生の実現に必要であると考えております。<br /><br /><br />
               「自分の可能性に気づく経験」や「人の力」を伸ばすことが<br />本当に「環境」に依存するものであるならば、<br />
               誰もが教育を受けられる環境が整えられるべきです。<br /><br /><span
                 style="color: #1b6d92"
@@ -46,8 +44,12 @@
           </section>
         </section>
         <section class="message philosophy__item">
-          <h1 class="message__title philosophy__title philosophy__ttl">代表挨拶</h1>
-          <h2 class="message__subtitle philosophy__subtitle philosophy__ttl">MESSAGE</h2>
+          <h1 class="message__title philosophy__title philosophy__ttl">
+            代表挨拶
+          </h1>
+          <h2 class="message__subtitle philosophy__subtitle philosophy__ttl">
+            MESSAGE
+          </h2>
           <section class="message__photo">
             <img
               src="../assets/inoue.jpg"
@@ -122,6 +124,7 @@ export default {
 
 .l-main {
   background-color: #f6f1f1;
+  line-height: 2.6;
 }
 
 .philosophy__ttl {
@@ -146,7 +149,7 @@ export default {
 
 .philosophy__subtitle {
   font-size: 45px;
-  padding-top: 80px;
+  padding-top: 70px;
   padding-left: 105px;
   opacity: 0.5;
   color: #7a8086;
@@ -163,41 +166,44 @@ export default {
   text-align: center;
 }
 
-.demoPhoto {
-  background-color: black;
-  width: 90%;
-  height: 150px;
-  border-radius: 35px;
-  margin-left: 5%;
+.philosophy__txt {
+  text-align: center;
 }
-/* .philosophy__hero {
-  background-color: black;
-  width: 90%;
-  height: auto;
-  border-radius: 35px; */
-/* } */
-
 .philosophy__text {
   animation-name: fadeUpAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 20px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 180px;
 }
 
+.philosophy__text--block {
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  font-size: 20px;
+  color: #27a7cc;
+  padding-bottom: 30px;
+  display: inline-block;
+  text-align:left;
+}
+.philosophy__text2 {
+  padding-top: 0px;
+}
 .message__title {
   padding-top: 140px;
 }
 
 .message__subtitle {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-left: 115px;
+  color: #7a808689;
 }
 .message__photo {
-  padding-top: 200px;
+  padding-top: 220px;
   animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -206,15 +212,16 @@ export default {
 }
 .message__inoue {
   border-radius: 35px;
-  width: 90%;
-  height: 60%;
+  width: 70%;
   object-fit: cover;
   object-position: 100% 5%;
 }
-
+.message__text {
+  padding-top: 60px;
+}
 .message__name {
   text-align: right;
-  padding: 0 20px 20px 0;
+  padding: 0 20px 200px 0;
   font-size: 20px;
   animation-name: fadeUpAnime;
   animation-duration: 2.5s;
@@ -244,6 +251,9 @@ export default {
   .message__name {
     font-size: 12px;
   }
+  .philosophy__text--block {
+    font-size: 12px;
+  }
 }
 
 @keyframes fadeUpAnime {
@@ -258,3 +268,5 @@ export default {
   }
 }
 </style>
+
+３点の下をもうちょい広く
