@@ -16,19 +16,39 @@
           <section class="philosophy__txt">
             <p class="philosophy__text">
               <!-- #B0D3E1#1B6D92#27A7CC -->
-              「どうせ無理、やっても失敗する」<br />ではなく、<br />「やったらいける！どうやろうか？」<br /><br />
-              SES業界は、全くの他業界へ出向をさせ、<br />若い未来を潰している状況にあります。<br />
-              しかし当社の出向先はPC必須や制作案件など<br />PCを操作する現場がほとんどです。<br />
-              制作をこなすことで実務ベースでスキルが向上するとともに<br />
-              インプットとアウトプットを素早く行うことで<br />習得したことを確実に定着させます。<br /><br />
+              「どうせ無理、やっても失敗する」<br class="br-sp" />ではなく、<br
+                class="br-sp"
+              />「やったらいける！どうやろうか？」<br /><br />
+              SES業界は、全くの他業界へ出向をさせ、<br
+                class="br-sp"
+              />若い未来を潰している状況にあります。<br />
+              しかし当社の出向先はPC必須や制作案件など<br
+                class="br-sp"
+              />PCを操作する現場がほとんどです。<br />
+              制作をこなすことで実務ベースでスキルが向上するとともに<br
+                class="br-sp"
+              />
+              インプットとアウトプットを素早く行うことで<br
+                class="br-sp"
+              />習得したことを確実に定着させます。<br /><br />
               <span style="color: #27a7cc"
-                >・物事を前向きに捉える<br />・相手の立場に立って考える<br />・他者の考えを尊重し、手を取り合って物事を進めていく</span
+                >・物事を前向きに捉える<br
+                  class="br-sp"
+                />・相手の立場に立って考える<br
+                  class="br-sp"
+                />・他者の考えを尊重し、手を取り合って物事を進めていく</span
               ><br />
-              このような視点や人との向き合い方が<br />豊かで誇りある人生の実現に必要であると考えております。<br /><br />
-              「自分の可能性に気づく経験」や「人の力」を伸ばすことが<br />本当に「環境」に依存するものであるならば、<br />
+              このような視点や人との向き合い方が豊かで<br
+                class="br-sp"
+              />誇りある人生の実現に必要であると考えております。<br /><br />
+              「自分の可能性に気づく経験」や「人の力」を伸ばすことが<br
+                class="br-sp"
+              />本当に「環境」に依存するものであるならば、<br class="br-sp" />
               誰もが教育を受けられる環境が整えられるべきです。<br /><br /><span
                 style="color: #1b6d92"
-                >弊社ではエンジニアになる準備を全面的に<br />支援できる環境を整えております。</span
+                >弊社ではエンジニアになる準備を<br
+                  class="br-sp"
+                />全面的に支援できる環境を整えております。</span
               >
             </p>
           </section>
@@ -46,16 +66,28 @@
           <section class="message__txt">
             <p class="message__text">
               皆様には平素よりご高配を賜り、誠にありがとうございます。<br /><br />
-              当社は2020年という新型コロナウイルス感染拡大の中で<br />事業をスタートさせました。<br />
-              以来SESの課題解決、有望な人財育成を行いつつ<br />常に柔軟な発想で事業にチャレンジしてまいりました。<br /><br />
+              当社は2020年という新型コロナウイルス感染拡大の中で<br
+                class="br-sp"
+              />事業をスタートさせました。<br />
+              以来SESの課題解決、有望な人財育成を行いつつ<br
+                class="br-sp"
+              />常に柔軟な発想で事業にチャレンジしてまいりました。<br /><br />
 
-              形のないものを提供するIT・SESサービスでは<br />お客様のご要望をしっかりとヒアリングすることが<br />最適なサービスを提供することにつながります。<br />
+              形のないものを提供するIT・SESサービスでは<br
+                class="br-sp"
+              />お客様のご要望をしっかりとヒアリングすることが<br
+                class="br-sp"
+              />最適なサービスを提供することにつながります。<br />
               つまり大切なのは人と人とのつながりです。<br /><br />
 
               おかげさまで創業からまる4年が経ちました。<br />
               存続させていただけているのも、皆様のお力添えのおかげです。<br />
-              今後も「未来の人財を育てるIT企業」として<br />世の中に貢献できるように今後もたゆまぬ努力を続けてまいります。<br /><br />
-              引き続き、当社をご支援賜りますよう、<br />何卒よろしくお願い申し上げます。<br /><br />
+              今後も「未来の人財を育てるIT企業」として世の中に<br
+                class="br-sp"
+              />貢献できるように今後もたゆまぬ努力を続けてまいります。<br /><br />
+              引き続き、当社をご支援賜りますよう、<br
+                class="br-sp"
+              />何卒よろしくお願い申し上げます。<br /><br />
             </p>
             <p class="message__name">代表 井上裕之</p>
           </section>
@@ -105,12 +137,12 @@ export default {
 }
 
 @media (max-width: 1179px) {
-  .l-wrap {
+  .l-main {
     width: 100%;
   }
 }
 @media (min-width: 1180px) {
-  .l-wrap {
+  .l-main {
     width: 50%;
   }
 }
@@ -125,6 +157,15 @@ export default {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+.br-sp {
+    display: none;
+}
+
+@media (max-width: 421px) {
+    .br-sp {
+        display: block;
+    }
 }
 .philosophy__title {
   font-size: 20px;
@@ -153,12 +194,12 @@ export default {
   text-align: center;
 }
 
-.demoPhoto{
+.demoPhoto {
   background-color: black;
   width: 90%;
   height: 150px;
   border-radius: 35px;
-margin-left: 15px;
+  margin-left: 15px;
 }
 /* .philosophy__hero {
   background-color: black;
@@ -208,7 +249,7 @@ margin-left: 15px;
 .message__inoue {
   border-radius: 35px;
   width: 90%;
-  height: 150px;
+  height: 60%;
   object-fit: cover;
   object-position: 100% 5%;
 }
@@ -217,8 +258,7 @@ margin-left: 15px;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 30px;
   text-align: center;
   padding-top: 20px;
 }
