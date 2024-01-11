@@ -1,7 +1,9 @@
 <template>
   <div>
     <footer class="footer">
-      <p class="footer-text">&copy; 2023 GROW 学習サイト. All rights reserved.</p>
+      <p class="footer-text">
+        &copy; 2023 GROW 学習サイト. All rights reserved.
+      </p>
     </footer>
   </div>
 </template>
