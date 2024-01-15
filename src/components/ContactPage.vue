@@ -69,14 +69,13 @@ export default {
   width: 100%;
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;
-  background-color: #fff;
+  background-color: #f6f1f1;
 }
 
 .p-contact__inner {
   /* max-width: 445px; */
   width: 100%;
   height: 100%;
-  background-color: #fff;
   padding: 100px 20px 40px;
 }
 
