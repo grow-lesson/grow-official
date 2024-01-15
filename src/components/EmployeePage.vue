@@ -10,369 +10,182 @@
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/matsubara.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">松原 勇志</p>
+              <li v-for="(employee, index) in employees" :key="index" class="employee-item">
+                <a @click="goToEmployeeDetailPage" class="employee-link">
+                  <div class="employee-profile">
+                    <div class="employee-imageBox">
+                      <img :src="employee.image" alt="" class="employee-image">
                     </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Matsubara yushi</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/tamaru.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">田丸 太一</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Tamaru taichi</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
+                    <div class="employee-work">
+                      <div class="employee-nameBox">
+                        <p class="employee-name">{{ employee.name }}</p>
+                      </div>
+                      <div class="employee-subNameBox">
+                        <p class="employee-subName">{{ employee.subName }}</p>
+                      </div>
+                      <div class="employee-descriptionBox">
+                        <p class="employee-description">{{ employee.description }}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/hinata.png" alt="" class="employee-image">
+                </a>
+              </li>
+            </ul>
+            <div class="pageNation-box">
+              <ul class="pageNation-list">
+              <li class="pageNation-item">
+                <button class="pageNation-button">
+                <div class="pageNation-previous"></div>
+                </button>
+              </li>
+              <li class="pageNation-item">
+                <button class="pageNation-button">
+                  <div class="pageNation-numberBox">
+                    <p class="pageNation-number">01</p>
                   </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">日向 一樹</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Hinaka kazuki</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
+                </button>
+              </li>
+              <li class="pageNation-item">
+                <button class="pageNation-button">
+                  <div class="pageNation-numberBox">
+                    <p class="pageNation-number">02</p>
                   </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/fukui.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">福井 涼太</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Fukui ryota</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/harada.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">原田 和也</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Harada kazuya</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/sasakiryo.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">佐々木 凌</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Sasaki ryo</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/kanno.png" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">菅野 祥輝</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Kanno syoki</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/keitaro.png" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">佐々木 敬太郎</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Sasaki keitaro</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/matsunaga.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">松永 卓也</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Matsunaga takuya</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/yamagishi.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">山岸 陸斗</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Yamagishi rikuto</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/kitazawa.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">北澤 弦太</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Kitazawa genta</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/takahashi.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">高橋 有希</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Takahashi Yuki</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/fujii.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">藤井 優子</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Fujii yuko</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/tuchiya.jpeg" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">土屋 暖乃</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Tuchiya nonno</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="employee-item">
-              <a @click="goToEmployeeDetailPage" class="employee-link">
-                <div class="employee-profile">
-                  <div class="employee-imageBox">
-                    <img src="../assets/black.png" alt="" class="employee-image">
-                  </div>
-                  <div class="employee-work">
-                    <div class="employee-nameBox">
-                      <p class="employee-name">金森 翔</p>
-                    </div>
-                    <div class="employee-subNameBox">
-                      <p class="employee-subName">Kanamori sho</p>
-                    </div>
-                    <div class="employee-descriptionBox">
-                      <p class="employee-description">フロントエンジニア</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div class="pageNation-box">
-            <ul class="pageNation-list">
-            <li class="pageNation-item">
-              <button class="pageNation-button">
-              <div class="pageNation-previous"></div>
-              </button>
-            </li>
-            <li class="pageNation-item">
-              <button class="pageNation-button">
-                <div class="pageNation-numberBox">
-                  <p class="pageNation-number">01</p>
-                </div>
-              </button>
-            </li>
-            <li class="pageNation-item">
-              <button class="pageNation-button">
-                <div class="pageNation-numberBox">
-                  <p class="pageNation-number">02</p>
-                </div>
-              </button>
-            </li>
-            <li class="pageNation-item">
-              <button class="pageNation-button">
-              <div class="pageNation-next"></div>
-              </button>
-            </li>
-          </ul>
-          </div>
-          
+                </button>
+              </li>
+              <li class="pageNation-item">
+                <button class="pageNation-button">
+                <div class="pageNation-next"></div>
+                </button>
+              </li>
+            </ul>
+            </div>
           </div>
         </div>
-
       </section>
       <Footer />
     </main>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
-import { useRouter } from 'vue-router';
 
-export default {
-  name: "EmployeePage",
-  components: {
-    Header,
-    Footer,
+const employees = ref([
+  {
+    name: '松原 勇志',
+    subName: 'Matsubara yushi',
+    description: 'フロントエンジニア',
+    image: '../assets/images/matsubara.jpeg'
   },
-  setup() {
-    const router = useRouter();
-
-    // Vue Routerを使用してページ間の遷移を行うメソッド
-    const goToEmployeeDetailPage = () => {
-      router.push({ name: "EmployeeDetailPage" });
-    };
-
-    return {
-      goToEmployeeDetailPage,
-    };
+  {
+    name: '田丸 太一',
+    subName: 'Tamaru taichi',
+    description: 'フロントエンジニア',
+    image: '../assets/images/tamaru.jpeg'
   },
+  {
+    name: '日向 一樹',
+    subName: 'Hinaka kazuki',
+    description: 'フロントエンジニア',
+    image: '../assets/images/hinata.png'
+  },
+  {
+    name: '福井 涼太',
+    subName: 'Fukui ryota',
+    description: 'フロントエンジニア',
+    image: '../assets/images/fukui.jpeg'
+  },
+  {
+    name: '原田 和也',
+    subName: 'Harada kazuya',
+    description: 'フロントエンジニア',
+    image: '../assets/images/harada.jpeg'
+  },
+  {
+    name: '佐々木 凌',
+    subName: 'Sasaki ryo',
+    description: 'フロントエンジニア',
+    image: '../assets/images/sasakiryo.jpeg'
+  },
+  {
+    name: '菅野 祥輝',
+    subName: 'Kanno syoki',
+    description: 'フロントエンジニア',
+    image: '../assets/images/kanno.png'
+  },
+  {
+    name: '佐々木 敬太郎',
+    subName: 'Sasaki keitaro',
+    description: 'フロントエンジニア',
+    image: '../assets/images/keitaro.png'
+  },
+  {
+    name: '松永 卓也',
+    subName: 'Matsunaga takuya',
+    description: 'フロントエンジニア',
+    image: '../assets/images/matsunaga.jpeg'
+  },
+  {
+    name: '山岸 陸斗',
+    subName: 'Yamagishi rikuto',
+    description: 'フロントエンジニア',
+    image: '../assets/images/yamagishi.jpeg'
+  },
+  {
+    name: '北澤 弦太',
+    subName: 'Kitazawa genta',
+    description: 'フロントエンジニア',
+    image: '../assets/images/kitazawa.jpeg'
+  },
+  {
+    name: '高橋 有希',
+    subName: 'Takahashi Yuki',
+    description: 'フロントエンジニア',
+    image: '../assets/images/takahashi.jpeg'
+  },
+  {
+    name: '藤井 優子',
+    subName: 'Fujii yuko',
+    description: 'フロントエンジニア',
+    image: '../assets/images/fujii.jpeg'
+  },
+  {
+    name: '土屋 暖乃',
+    subName: 'Tuchiya nonno',
+    description: 'フロントエンジニア',
+    image: '../assets/images/tuchiya.jpeg'
+  },
+  {
+    name: '金森 翔',
+    subName: 'Kanamori sho',
+    description: 'フロントエンジニア',
+    image: '../assets/images/black.png'
+  },
+  // 新しい従業員のデータを追加
+  {
+    name: '新しい従業員1',
+    subName: 'SubName1',
+    description: '職種1',
+    image: '../assets/images/new_employee1.jpeg'
+  },
+  {
+    name: '新しい従業員2',
+    subName: 'SubName2',
+    description: '職種2',
+    image: '../assets/images/new_employee2.jpeg'
+  },
+]);
+
+const router = useRouter();
+
+// Vue Routerを使用してページ間の遷移を行うメソッド
+const goToEmployeeDetailPage = () => {
+  router.push({ name: "EmployeeDetailPage" });
 };
+
 </script>
 
 <style>
