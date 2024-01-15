@@ -22,11 +22,6 @@ const routes = [
     component: () => import("../components/EmployeePage.vue"),
   },
   {
-    path: "/philosophy",
-    name: "Philosophy",
-    component: () => import("../components/PhilosophyPage.vue"),
-  },
-  {
     path: "/employee-detail",
     name: "EmployeeDetailPage",
     component: () => import("../components/EmployeeDetailPage.vue"),
@@ -44,7 +39,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("/sub18.grow-test.com/"),
+  history: createWebHistory("/grow-official/"),
   routes,
 });
 
