@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter } from "vue-router";
 
 const routes = [
   {
@@ -44,8 +44,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("/grow-official/"),
-  base: '/grow-official/',
+  //history: createWebHistory("/grow-official/"),
   routes,
 });
 
