@@ -4,15 +4,12 @@
     <main class="main">
       <section class="employee">
         <div class="employee-head">
-          <div class="employee-shadowBox">
-            <h1 class="employee-shadow">EMPLOYEE</h1>
-          </div>
-          <div class="employee-titleBox">
-            <h1 class="employee-title">社員紹介</h1>
-          </div>
+          <h1 class="employee__title">社員紹介</h1>
+          <h2 class="employee__subtitle">EMPLOYEE</h2>
         </div>
         <div class="employee-main">
-          <ul class="employee-list">
+          <div class="employee-mainInner">
+            <ul class="employee-list">
             <li class="employee-item">
               <a @click="goToEmployeeDetailPage" class="employee-link">
                 <div class="employee-profile">
@@ -342,6 +339,8 @@
             </li>
           </ul>
           </div>
+          
+          </div>
         </div>
 
       </section>
@@ -381,24 +380,47 @@ export default {
   display: flex;
 }
 
-.main {
-  width: 50%;
-}
-
-@media screen and (max-width: 767px) {
+@media (max-width: 1179px) {
   .main {
     width: 100%;
   }
+}
+
+@media (min-width: 1180px) {
+  .main {
+    width: 50%;
+  }
+}
+@media (min-width: 580px) {
+  .employee-list{
+  display: none;
+}
+}
+@media (max-width: 580px) {
+  .employee-list{
+  display: none;
+}
+}
+
+.employee-mainInner{
+  width: 580px;
+  margin: 0 auto;
 }
 
 
 .employee {
   width: 100%;
   padding: 60px 0;
-  background-color: rgb(205, 205, 205);
+  background-color: #f6f1f1;
 }
 
 .employee-head{
+  position: relative;
+  font-weight: bold;
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   width: 90%;
   margin: 0 auto;
   position: relative;
@@ -409,27 +431,23 @@ export default {
   height: 80px;
   position: relative;
 }
-
-.employee-title{
-font-weight: bold;
-font-size: 37px;
-position: absolute;
-bottom: 0;
-}
-
-.employee-shadowBox{
-  height: 80px;
+.employee__title {
+  font-size: 30px;
+  padding-top: 100px;
+  padding-left: 20px;
   position: absolute;
-  left: 115px;
-  bottom: 0;
+  z-index: 10;
 }
 
-.employee-shadow{
-  line-height: 80px;
-  font-size: 75px;
-  font-weight: bold;
-  color: rgb(157, 157, 157,0.5);
+.employee__subtitle {
+  font-size: 45px;
+  padding-top: 70px;
+  padding-left: 105px;
+  opacity: 0.5;
+  color: #7a8086;
+  position: absolute;
   font-style: italic;
+  z-index: 1;
 }
 
 .employee-link {
@@ -437,11 +455,15 @@ bottom: 0;
 }
 
 .employee-main{
-  margin-top: 60px;
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  margin-top: 160px;
 }
 
 .employee-list{
-  width: 95%;
+  width: 96%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -449,16 +471,14 @@ bottom: 0;
 }
 
 .employee-item{
-  width: 48.5%;
-}
-
-.employee-item:nth-child(n+3) {
+  width: 270px;
   margin-top: 20px;
 }
 
+
 .employee-image{
   width: 100%;
-  height: 224px;
+  height: 165px;
   border-radius: 20px 20px 0 0;
 }
 
@@ -481,7 +501,7 @@ bottom: 0;
 
 .employee-work{
   background-color: azure;
-  padding: 20px;
+  padding: 18px;
   border-radius: 0 0 20px 20px;
 }
 
@@ -554,6 +574,17 @@ bottom: 0;
   left: 8px;
   top: 8px;
   transform: rotate(45deg);
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 </style>
