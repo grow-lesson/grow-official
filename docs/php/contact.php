@@ -48,5 +48,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "お問い合わせフォームからのリクエストではありません。";
 }
-ob_end_flush();
+ob_end_flush(); 
 ?>
