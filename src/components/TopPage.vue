@@ -6,46 +6,59 @@
         <div class="top-hero">
         </div>
         <section class="top-philosophy">
-          <div class="heading">
-            <h2 class="heading-title">企業理念</h2>
-            <div class="heading-engTitle">VISION</div>
-          </div>
-          <div class="top-imgWrap">
-            <div class="top-philosophyImg"></div>
+          <section class="heading">
+            <h2 class="heading-title">企業理念
+              <span class="heading-endTitle">VISION</span>
+            </h2>
+          </section>
+          <div class="top-philosophy__textBox">
+            <p class="top-philosophy__text">「自分の可能性に気づく経験」や「人の力」を伸ばすことが本当に「環境」に依存するものであるならば、
+              誰もが教育を受けられる環境が整えられるべきです。
+            </p>
+            <p class="top-philosophy__markup">弊社ではエンジニアになる準備を<br>全面的に支援できる環境を整えております。</p>
           </div>
           <div class="top-read">
-            <p>ReadMore>></p>
+            <a @click="goToPhilosophyPage">
+              <p>ReadMore>></p>
+            </a>
           </div>
         </section>
         <section class="top-company">
-          <div class="heading">
-            <h2 class="heading-title">事業内容</h2>
-            <div class="heading-engTitle">BUSINESS</div>
-          </div>
+          <section class="heading">
+            <h2 class="heading-title">事業内容
+              <span class="heading-endTitle">BUSINESS</span>
+            </h2>
+          </section>
           <div class="top-imgWrap">
             <div class="top-companyImg"></div>
           </div>
           <div class="top-read">
-            <p>ReadMore>></p>
+            <a @click="goToCompanyPage">
+              <p>ReadMore>></p>
+            </a>
           </div>
         </section>
         <section class="top-employee">
-          <div class="heading">
-            <h2 class="heading-title">社員紹介</h2>
-            <div class="heading-engTitle">EMPLOYEE</div>
-          </div>
+          <section class="heading">
+            <h2 class="heading-title">社員紹介
+              <span class="heading-endTitle">EMPLOYEE</span>
+            </h2>
+          </section>
           <div class="top-imgWrap">
             <div class="top-employeeImg"></div>
           </div>
           <div class="top-read">
-            <p>ReadMore>></p>
+            <a @click="goToEmployeePage">
+              <p>ReadMore>></p>
+            </a>
           </div>
         </section>
         <section class="top-accomplishment">
-          <div class="heading">
-            <h2 class="heading-title">実績</h2>
-            <div class="heading-engTitle">ACHIEVEMENTS</div>
-          </div>
+          <section class="heading">
+            <h2 class="heading-title">実績
+              <span class="heading-endTitleLittle">ACHIEVEMENTS</span>
+            </h2>
+          </section>
           <ul>
             <li>
               <article>
@@ -75,12 +88,14 @@
             </li>
           </ul>
           <div class="top-read">
-            <p>ReadMore>></p>
+            <a @click="goToAccomplishmentPage">
+              <p>ReadMore>></p>
+            </a>
           </div>
         </section>
         <section class="top-contact">
           <div class="top-buttonWrap">
-            <button class="top-button">お問い合わせはコチラ</button>
+            <button class="top-button" @click="goToContactPage">お問い合わせはコチラ</button>
           </div>
         </section>
       </div>
@@ -92,12 +107,49 @@
 <script>
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import { useRouter } from 'vue-router';
 
 export default {
   name: "TopPage",
   components: {
     Header,
     Footer,
+  },
+  setup() {
+    const router = useRouter();
+    // Vue Routerを使用してページ間の遷移を行うメソッド
+
+    const goToPhilosophyPage = () => {
+      router.push({ name: "PhilosophyPage" });
+    };
+
+    const goToCompanyPage = () => {
+      router.push({ name: "CompanyPage" });
+    };
+
+    const goToEmployeePage = () => {
+      router.push({ name: "EmployeePage" });
+    };
+
+    const goToEmployeeDetailPage = () => {
+      router.push({ name: "EmployeeDetailPage" });
+    };
+
+    const goToAccomplishmentPage = () => {
+      router.push({ name: "AccomplishmentPage" });
+    };
+
+    const goToContactPage = () => {
+      router.push({ name: "ContactPage" });
+    };
+    return {
+      goToPhilosophyPage,
+      goToCompanyPage,
+      goToEmployeePage,
+      goToEmployeeDetailPage,
+      goToAccomplishmentPage,
+      goToContactPage,
+    };
   },
 };
 </script>
@@ -126,24 +178,33 @@ export default {
 }
 
 .heading {
-  position: relative;
-  text-align: center;
-  padding: 24px 0;
+  padding: 10px 0 10px 20px;
 }
 
 .heading-title {
-  position: absolute;
-  top: 35px;
-  left: 20px;
+  position: relative;
   font-size: 25px;
   font-weight: bold;
 }
 
-.heading-engTitle {
-  font-size: 32px;
+.heading-endTitle {
+  position: absolute;
+  top: -12px;
+  left: 75px;
+  font-size: 35px;
   font-weight: bold;
   font-style: italic;
-  opacity: 0.2;
+  opacity: 0.3;
+}
+
+.heading-endTitleLittle {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.3;
 }
 
 .top-hero {
@@ -166,6 +227,21 @@ export default {
   width: 100%;
   height: 330px;
   background-color: #b7b7b7;
+}
+
+.top-philosophy__textBox {
+  margin: 10px 15px;
+}
+
+.top-philosophy__text {
+  font-size: 16px;
+}
+
+.top-philosophy__markup {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: #1b6d92;
 }
 
 .top-philosophyImg {
@@ -255,4 +331,5 @@ export default {
   .main {
     width: 100%;
   }
-}</style>
+}
+</style>
