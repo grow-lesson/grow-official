@@ -330,6 +330,7 @@ export default {
   line-height: 30px;
   font-size: 36px;
   color: #fff;
+  background-color: transparent;
 }
 
 .arrow-left {

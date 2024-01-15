@@ -77,11 +77,11 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  padding: 40px 20px;
+  padding: 100px 20px 40px;
 }
 
 .p-contact__heading {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 30px;
@@ -92,9 +92,9 @@ export default {
 .p-contact__heading::before {
   content: "CONTACT";
   position: absolute;
-  right: -150px;
-  top: -19px;
-  font-size: 30px;
+  right: -225px;
+  top: -25px;
+  font-size: 45px;
   font-weight: bold;
   color: #bfbebe;
   letter-spacing: 0.05em;
@@ -108,6 +108,7 @@ export default {
 
 form {
   padding: 0 10px;
+  font-size: 18px;
 }
 
 input {
@@ -137,7 +138,8 @@ textarea {
 }
 
 button {
-  width: 250px;
+  width: 150px;
+  height: 35px;
   padding: 2px;
   background-color: #000;
   color: white;

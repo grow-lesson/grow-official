@@ -8,7 +8,7 @@
           <div class="p-employeeDetail__container">
             <h3 class="p-employeeDetail__title">高橋 有希</h3>
             <figure class="p-employeeDetail__image">
-              <img src="https://placehold.jp/150x150.png" alt="ダミー画像" />
+              <img src="../assets/images/kanno.png" alt="ダミー画像" />
             </figure>
             <h4 class="p-employeeDetail__post">エンジニア</h4>
             <p class="p-employeeDetail__text">
@@ -102,7 +102,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  padding: 40px 20px;
+  padding: 100px 20px 40px;
 }
 
 .p-employeeDetail__container {
@@ -115,7 +115,7 @@ export default {
 }
 
 .p-employeeDetail__heading {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 30px;
@@ -126,9 +126,9 @@ export default {
 .p-employeeDetail__heading::before {
   content: "EMPLOYEE";
   position: absolute;
-  right: -170px;
-  top: -18px;
-  font-size: 30px;
+  right: -255px;
+  top: -28px;
+  font-size: 45px;
   font-weight: bold;
   color: #bfbebe;
   letter-spacing: 0.05em;
@@ -136,39 +136,41 @@ export default {
 }
 
 .p-employeeDetail__title {
-  font-size: 24px;
+  font-size: 36px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 600;
+  text-align: center;
 }
 
 .p-employeeDetail__title::after {
   content: "Takahashi Yuki";
   position: absolute;
-  top: 35px;
+  top: 46px;
   left: 0;
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   color: #000;
 }
 
 .p-employeeDetail__post {
   color: #000;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .p-employeeDetail__text {
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0 10px;
   margin-top: 5px;
 }
 
 .p-employeeDetail-Career__title {
   color: #000;
-  font-size: 14px;
+  font-size: 18px;
   margin-top: 30px;
   font-weight: bold;
 }
@@ -183,13 +185,13 @@ export default {
 
 .p-employeeDetail-Career__date {
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
 }
 
 .p-employeeDetail-Career__text {
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .p-employeeDetail-Career__tagBox {
@@ -200,7 +202,7 @@ export default {
 .p-employeeDetail-Career__tag {
   background-color: #e0dede;
   padding: 2px 10px;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -212,7 +214,7 @@ export default {
 .p-employeeDetail__backBtn a {
   background-color: #000;
   padding: 7px 18px;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 3px;
   font-weight: bold;
   color: #fff;
