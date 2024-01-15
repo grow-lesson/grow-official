@@ -7,6 +7,7 @@
           <h1 class="employee__title">社員紹介</h1>
           <h2 class="employee__subtitle">EMPLOYEE</h2>
         </div>
+
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
