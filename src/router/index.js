@@ -45,6 +45,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory("/grow-official/"),
+  base: '/grow-official/',
   routes,
 });
 
