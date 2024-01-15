@@ -1,5 +1,5 @@
 module.exports = {
-  mopublicPath: "/",
+  publicPath: "/",
   outputDir: "docs",
   assetsDir: "",
 }
