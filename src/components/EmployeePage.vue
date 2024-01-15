@@ -78,19 +78,19 @@ const employees = ref([
     name: '松原 勇志',
     subName: 'Matsubara yushi',
     description: 'フロントエンジニア',
-    image: '../assets/images/matsubara.jpeg'
+    image: './assets/images/matsubara.jpeg'
   },
   {
     name: '田丸 太一',
     subName: 'Tamaru taichi',
     description: 'フロントエンジニア',
-    image: '../assets/images/tamaru.jpeg'
+    image: '../assets/tamaru.jpeg'
   },
   {
     name: '日向 一樹',
     subName: 'Hinaka kazuki',
     description: 'フロントエンジニア',
-    image: '../assets/images/hinata.png'
+    image: './assets/images/hinata.png'
   },
   {
     name: '福井 涼太',
