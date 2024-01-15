@@ -5,7 +5,7 @@
       <section class="p-contact">
         <div class="p-contact__inner">
           <h2 class="p-contact__heading">お問い合わせ</h2>
-          <form action="../../php/contact.php" method="post">
+          <form action="../../../php/contact.php" method="post">
             <div class="p-contact__box">
               <label for="name">お名前</label>
               <input type="text" id="name" name="name" required />
