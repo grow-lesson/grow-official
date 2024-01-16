@@ -11,21 +11,18 @@
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
-              <li v-for="(employee, index) in employees" :key="index" class="employee-item">
-                <a @click="goToEmployeeDetailPage" class="employee-link">
+              <li v-for="(employee, index) in employeesRef" :key="index" class="employee-item">
+                <a @click="goToEmployeeDetailPage(employee)" class="employee-link">
                   <div class="employee-profile">
                     <div class="employee-imageBox">
                       <img :src="require(`@/assets/images/${employee.image}`)" alt="" class="employee-image">
                     </div>
                     <div class="employee-work">
-                      <div class="employee-nameBox">
-                        <p class="employee-name">{{ employee.name }}</p>
-                      </div>
-                      <div class="employee-subNameBox">
-                        <p class="employee-subName">{{ employee.subName }}</p>
+                      <div class="employee-joiningDayBox">
+                        <p class="employee-joiningDay">{{ employee.joiningDay }}年入社</p>
                       </div>
                       <div class="employee-descriptionBox">
-                        <p class="employee-description">{{ employee.description }}</p>
+                        <p class="employee-description">{{ employee.position }}</p>
                       </div>
                     </div>
                   </div>
@@ -73,105 +70,16 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import employees from "@/const/employees.js";
 
-const employees = ref([
-  {
-    name: '松原 勇志',
-    subName: 'Matsubara yushi',
-    description: 'フロントエンジニア',
-    image: 'matsubara.jpeg'
-  },
-  {
-    name: '田丸 太一',
-    subName: 'Tamaru taichi',
-    description: 'フロントエンジニア',
-    image: 'tamaru.jpeg'
-  },
-  {
-    name: '日向 一樹',
-    subName: 'Hinaka kazuki',
-    description: 'フロントエンジニア',
-    image: 'hinata.png'
-  },
-  {
-    name: '福井 涼太',
-    subName: 'Fukui ryota',
-    description: 'フロントエンジニア',
-    image: 'fukui.jpeg'
-  },
-  {
-    name: '原田 和也',
-    subName: 'Harada kazuya',
-    description: 'フロントエンジニア',
-    image: 'harada.jpeg'
-  },
-  {
-    name: '佐々木 凌',
-    subName: 'Sasaki ryo',
-    description: 'フロントエンジニア',
-    image: 'sasakiryo.jpeg'
-  },
-  {
-    name: '菅野 祥輝',
-    subName: 'Kanno syoki',
-    description: 'フロントエンジニア',
-    image: 'kanno.png'
-  },
-  {
-    name: '佐々木 敬太郎',
-    subName: 'Sasaki keitaro',
-    description: 'フロントエンジニア',
-    image: 'keitaro.png'
-  },
-  {
-    name: '松永 卓也',
-    subName: 'Matsunaga takuya',
-    description: 'フロントエンジニア',
-    image: 'matsunaga.jpeg'
-  },
-  {
-    name: '山岸 陸斗',
-    subName: 'Yamagishi rikuto',
-    description: 'フロントエンジニア',
-    image: 'yamagishi.jpeg'
-  },
-  {
-    name: '北澤 弦太',
-    subName: 'Kitazawa genta',
-    description: 'フロントエンジニア',
-    image: 'kitazawa.jpeg'
-  },
-  {
-    name: '高橋 有希',
-    subName: 'Takahashi Yuki',
-    description: 'フロントエンジニア',
-    image: 'takahashi.jpeg'
-  },
-  {
-    name: '藤井 優子',
-    subName: 'Fujii yuko',
-    description: 'フロントエンジニア',
-    image: 'fujii.jpeg'
-  },
-  {
-    name: '土屋 暖乃',
-    subName: 'Tuchiya nonno',
-    description: 'フロントエンジニア',
-    image: 'tuchiya.jpeg'
-  },
-  {
-    name: '金森 翔',
-    subName: 'Kanamori sho',
-    description: 'フロントエンジニア',
-    image: 'black.png'
-  },
-]);
+const employeesRef = ref(employees);
 
 const router = useRouter();
 
 // Vue Routerを使用してページ間の遷移を行うメソッド
-const goToEmployeeDetailPage = () => {
-  router.push({ name: "EmployeeDetailPage" });
+const goToEmployeeDetailPage = (employee) => {
+  console.dir(employee.name);
+  router.push({ name: "EmployeeDetailPage", params: { id: employee.id } });
 };
 
 </script>
@@ -204,7 +112,7 @@ const goToEmployeeDetailPage = () => {
 }
 
 .employee-mainInner{
-  width: 580px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -272,14 +180,14 @@ const goToEmployeeDetailPage = () => {
 }
 
 .employee-item{
-  width: 270px;
+  width: 300px;
   margin-top: 20px;
 }
 
 
 .employee-image{
   width: 100%;
-  height: 165px;
+  height: 180px;
   border-radius: 20px 20px 0 0;
 }
 
@@ -288,7 +196,7 @@ const goToEmployeeDetailPage = () => {
   font-weight: bold;
 }
 
-.employee-subName{
+.employee-joiningDay{
   font-size: 18px;
 }
 
