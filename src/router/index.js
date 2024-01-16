@@ -22,9 +22,10 @@ const routes = [
     component: () => import("../components/EmployeePage.vue"),
   },
   {
-    path: "/employee-detail",
+    path: '/employee/:id',
     name: "EmployeeDetailPage",
     component: () => import("../components/EmployeeDetailPage.vue"),
+    props: true,
   },
   {
     path: "/accomplishment",
