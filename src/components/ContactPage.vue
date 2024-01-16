@@ -5,7 +5,7 @@
       <section class="p-contact">
         <div class="p-contact__inner">
           <h2 class="p-contact__heading">お問い合わせ</h2>
-          <form action="" method="post">
+          <form action="../../../php/contact.php" method="post">
             <div class="p-contact__box">
               <label for="name">お名前</label>
               <input type="text" id="name" name="name" required />
@@ -69,19 +69,18 @@ export default {
   width: 100%;
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;
-  background-color: #fff;
+  background-color: #f6f1f1;
 }
 
 .p-contact__inner {
   /* max-width: 445px; */
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  padding: 40px 20px;
+  padding: 100px 20px 40px;
 }
 
 .p-contact__heading {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 30px;
@@ -92,9 +91,9 @@ export default {
 .p-contact__heading::before {
   content: "CONTACT";
   position: absolute;
-  right: -150px;
-  top: -19px;
-  font-size: 30px;
+  right: -225px;
+  top: -25px;
+  font-size: 45px;
   font-weight: bold;
   color: #bfbebe;
   letter-spacing: 0.05em;
@@ -108,6 +107,7 @@ export default {
 
 form {
   padding: 0 10px;
+  font-size: 18px;
 }
 
 input {
@@ -137,7 +137,8 @@ textarea {
 }
 
 button {
-  width: 250px;
+  width: 150px;
+  height: 35px;
   padding: 2px;
   background-color: #000;
   color: white;

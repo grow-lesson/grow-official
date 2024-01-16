@@ -7,6 +7,7 @@
           <h1 class="employee__title">社員紹介</h1>
           <h2 class="employee__subtitle">EMPLOYEE</h2>
         </div>
+
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
@@ -14,7 +15,7 @@
                 <a @click="goToEmployeeDetailPage" class="employee-link">
                   <div class="employee-profile">
                     <div class="employee-imageBox">
-                      <img :src="employee.image" alt="" class="employee-image">
+                      <img :src="require(`@/assets/images/${employee.image}`)" alt="" class="employee-image">
                     </div>
                     <div class="employee-work">
                       <div class="employee-nameBox">
@@ -78,104 +79,91 @@ const employees = ref([
     name: '松原 勇志',
     subName: 'Matsubara yushi',
     description: 'フロントエンジニア',
-    image: './assets/images/matsubara.jpeg'
+    image: 'matsubara.jpeg'
   },
   {
     name: '田丸 太一',
     subName: 'Tamaru taichi',
     description: 'フロントエンジニア',
-    image: '../assets/tamaru.jpeg'
+    image: 'tamaru.jpeg'
   },
   {
     name: '日向 一樹',
     subName: 'Hinaka kazuki',
     description: 'フロントエンジニア',
-    image: './assets/images/hinata.png'
+    image: 'hinata.png'
   },
   {
     name: '福井 涼太',
     subName: 'Fukui ryota',
     description: 'フロントエンジニア',
-    image: '../assets/images/fukui.jpeg'
+    image: 'fukui.jpeg'
   },
   {
     name: '原田 和也',
     subName: 'Harada kazuya',
     description: 'フロントエンジニア',
-    image: '../assets/images/harada.jpeg'
+    image: 'harada.jpeg'
   },
   {
     name: '佐々木 凌',
     subName: 'Sasaki ryo',
     description: 'フロントエンジニア',
-    image: '../assets/images/sasakiryo.jpeg'
+    image: 'sasakiryo.jpeg'
   },
   {
     name: '菅野 祥輝',
     subName: 'Kanno syoki',
     description: 'フロントエンジニア',
-    image: '../assets/images/kanno.png'
+    image: 'kanno.png'
   },
   {
     name: '佐々木 敬太郎',
     subName: 'Sasaki keitaro',
     description: 'フロントエンジニア',
-    image: '../assets/images/keitaro.png'
+    image: 'keitaro.png'
   },
   {
     name: '松永 卓也',
     subName: 'Matsunaga takuya',
     description: 'フロントエンジニア',
-    image: '../assets/images/matsunaga.jpeg'
+    image: 'matsunaga.jpeg'
   },
   {
     name: '山岸 陸斗',
     subName: 'Yamagishi rikuto',
     description: 'フロントエンジニア',
-    image: '../assets/images/yamagishi.jpeg'
+    image: 'yamagishi.jpeg'
   },
   {
     name: '北澤 弦太',
     subName: 'Kitazawa genta',
     description: 'フロントエンジニア',
-    image: '../assets/images/kitazawa.jpeg'
+    image: 'kitazawa.jpeg'
   },
   {
     name: '高橋 有希',
     subName: 'Takahashi Yuki',
     description: 'フロントエンジニア',
-    image: '../assets/images/takahashi.jpeg'
+    image: 'takahashi.jpeg'
   },
   {
     name: '藤井 優子',
     subName: 'Fujii yuko',
     description: 'フロントエンジニア',
-    image: '../assets/images/fujii.jpeg'
+    image: 'fujii.jpeg'
   },
   {
     name: '土屋 暖乃',
     subName: 'Tuchiya nonno',
     description: 'フロントエンジニア',
-    image: '../assets/images/tuchiya.jpeg'
+    image: 'tuchiya.jpeg'
   },
   {
     name: '金森 翔',
     subName: 'Kanamori sho',
     description: 'フロントエンジニア',
-    image: '../assets/images/black.png'
-  },
-  // 新しい従業員のデータを追加
-  {
-    name: '新しい従業員1',
-    subName: 'SubName1',
-    description: '職種1',
-    image: '../assets/images/new_employee1.jpeg'
-  },
-  {
-    name: '新しい従業員2',
-    subName: 'SubName2',
-    description: '職種2',
-    image: '../assets/images/new_employee2.jpeg'
+    image: 'black.png'
   },
 ]);
 
