@@ -4,8 +4,7 @@
     <main class="main">
       <section class="employee">
         <div class="employee-head">
-          <h1 class="employee__title">社員紹介</h1>
-          <h2 class="employee__subtitle">EMPLOYEE</h2>
+          <MenuTitle :headingText="title" :headingSubText="subTitle"/>
         </div>
 
         <div class="employee-main">
@@ -70,7 +69,11 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import MenuTitle from "@/components/common/MenuTitle.vue";
 import employees from "@/const/employees.js";
+
+const title = ref("社員紹介");
+const subTitle = ref("EMPLOYEE");
 
 const employeesRef = ref(employees);
 
@@ -139,24 +142,6 @@ const goToEmployeeDetailPage = (employee) => {
   width: 150px;
   height: 80px;
   position: relative;
-}
-.employee__title {
-  font-size: 30px;
-  padding-top: 100px;
-  padding-left: 20px;
-  position: absolute;
-  z-index: 10;
-}
-
-.employee__subtitle {
-  font-size: 45px;
-  padding-top: 70px;
-  padding-left: 105px;
-  opacity: 0.5;
-  color: #7a8086;
-  position: absolute;
-  font-style: italic;
-  z-index: 1;
 }
 
 .employee-link {

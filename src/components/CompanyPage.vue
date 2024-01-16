@@ -4,8 +4,7 @@
     <main class="main">
       <section class="p-company fadeUp">
         <section class="p-company__top">
-          <h1 class="p-company__toptitle">事業内容</h1>
-          <h2 class="p-company__subtitle">BUSINESS</h2>
+          <MenuTitle :headingText="title" :headingSubText="subTitle"/>
         </section>
         <div class="p-company__content">
           <section class="p-company__photo">
@@ -111,63 +110,53 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import MenuTitle from "@/components/common/MenuTitle.vue";
+import { ref, computed } from 'vue';
 
-export default {
-  name: "CompanyPage",
-  components: {
-    Header,
-    Footer,
-  },
-  data() {
-    return {
-      currentTab: "company-info",
-      photos: [
-        { src: require("@/assets/business01.jpg"), alt: "写真1" },
-        { src: require("@/assets/business02.jpg"), alt: "写真2" },
-        { src: require("@/assets/business03.jpg"), alt: "写真3" },
-      ],
-      titles: [
-        "エンジニアリングサービス",
-        "Web制作/システム開発",
-        "エンジニア育成事業",
-      ],
-      articles: [
-        "即戦力になるエンジニアをお客様の悩みに沿ってマッチングさせるサービスです。 短期間から長期間までお客様のニーズに合わせて、適材適所のエンジニア人材を提供いたします。 お気軽にお問合せ頂ければ、ヒアリングさせて頂き、ご要望にあった人材を提供いたします。",
-        "LPなどの 簡単なサイトから、業務システムまで、お客様のご要望に沿った形を提案しながら作り上げていきます。また、お客様のご要望だけでなく、市場動向、流行り、適切な費用対効果を含め社会的ニーズに提案をさせて頂きます。",
-        "会社に属して働く環境から個人が仕事をするという世の中の流れの中で、戦っていける人材を育成致します。特にエンジニアは今後も需要が高まる職業です。問題解決をするスキルも必要になります。単なるエンジニアではなく人としての育成を含め、未来で戦っていける人材育成を目指します。",
-      ],
-      currentPhotoIndex: 0,
-    };
-  },
-  computed: {
-    currentPhoto() {
-      return this.photos[this.currentPhotoIndex];
-    },
+const currentPhotoIndex = ref(0);
+const title = ref("事業内容");
+const subTitle = ref("BUSINESS");
 
-    currentArticle() {
-      return this.articles[this.currentPhotoIndex];
-    },
-  },
-  methods: {
-    changeTab(direction) {
-      if (direction === "prev") {
-        this.currentPhotoIndex =
-          (this.currentPhotoIndex - 1 + this.photos.length) %
-          this.photos.length;
-      } else if (direction === "next") {
-        this.currentPhotoIndex =
-          (this.currentPhotoIndex + 1) % this.photos.length;
-      }
-    },
-    changeTabByTitle(index) {
-      this.currentPhotoIndex = index;
-    },
-  },
-};
+const photos = ref([
+  { src: require("@/assets/business01.jpg"), alt: "写真1" },
+  { src: require("@/assets/business02.jpg"), alt: "写真2" },
+  { src: require("@/assets/business03.jpg"), alt: "写真3" },
+]);
+
+const titles = ref([
+  "エンジニアリングサービス",
+  "Web制作/システム開発",
+  "エンジニア育成事業",
+]);
+
+const articles = ref([
+  "即戦力になるエンジニアをお客様の悩みに沿ってマッチングさせるサービスです。 短期間から長期間までお客様のニーズに合わせて、適材適所のエンジニア人材を提供いたします。 お気軽にお問合せ頂ければ、ヒアリングさせて頂き、ご要望にあった人材を提供いたします.",
+  "LPなどの簡単なサイトから、業務システムまで、お客様のご要望に沿った形を提案しながら作り上げていきます。また、お客様のご要望だけでなく、市場動向、流行り、適切な費用対効果を含め社会的ニーズに提案をさせて頂きます。",
+  "会社に属して働く環境から個人が仕事をするという世の中の流れの中で、戦っていける人材を育成致します。特にエンジニアは今後も需要が高まる職業です。問題解決をするスキルも必要になります。単なるエンジニアではなく人としての育成を含め、未来で戦っていける人材育成を目指します。",
+]);
+
+const currentPhoto = computed(() => photos.value[currentPhotoIndex.value]);
+const currentArticle = computed(() => articles.value[currentPhotoIndex.value]);
+
+function changeTab(direction) {
+  if (direction === "prev") {
+    currentPhotoIndex.value =
+      (currentPhotoIndex.value - 1 + photos.value.length) %
+      photos.value.length;
+  } else if (direction === "next") {
+    currentPhotoIndex.value =
+      (currentPhotoIndex.value + 1) % photos.value.length;
+  }
+}
+
+function changeTabByTitle(index) {
+  currentPhotoIndex.value = index;
+}
 </script>
+
 
 <style>
 .wrap {
@@ -194,27 +183,6 @@ export default {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 1;
-}
-
-.p-company__toptitle {
-  font-size: 25px;
-  font-size: 1.6rem;
-  padding-top: 100px;
-  padding-left: 20px;
-  position: absolute;
-  z-index: 10;
-}
-
-.p-company__subtitle {
-  font-size: 40px;
-  padding-top: 75px;
-  padding-left: 95px;
-  opacity: 0.5;
-  color: #7a8086;
-  position: absolute;
-  font-weight: 800;
-  font-style: italic;
-  z-index: 1;
 }
 
 .selected-title {
@@ -253,9 +221,6 @@ export default {
   font-weight: bold;
   padding-top: 50px;
   padding-left: 20px;
-}
-
-.p-company__introduction {
 }
 
 .p-company__box {

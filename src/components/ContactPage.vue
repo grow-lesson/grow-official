@@ -2,9 +2,9 @@
   <div class="wrap">
     <Header />
     <main class="main">
+      <MenuTitle :headingText="title" :headingSubText="subTitle"/>
       <section class="p-contact">
         <div class="p-contact__inner">
-          <h2 class="p-contact__heading">お問い合わせ</h2>
           <form action="../../../php/contact.php" method="post">
             <div class="p-contact__box">
               <label for="name">お名前</label>
@@ -37,17 +37,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import MenuTitle from "@/components/common/MenuTitle.vue";
 
-export default {
-  name: "ContactPage",
-  components: {
-    Header,
-    Footer,
-  },
-};
+const title = ref("お問い合わせ");
+const subTitle = ref("CONTACT");
+
 </script>
 
 <style>
@@ -77,27 +75,6 @@ export default {
   width: 100%;
   height: 100%;
   padding: 100px 20px 40px;
-}
-
-.p-contact__heading {
-  font-size: 30px;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 2;
-}
-
-.p-contact__heading::before {
-  content: "CONTACT";
-  position: absolute;
-  right: -225px;
-  top: -25px;
-  font-size: 45px;
-  font-weight: bold;
-  color: #bfbebe;
-  letter-spacing: 0.05em;
-  z-index: -1;
 }
 
 .p-contact__submit {

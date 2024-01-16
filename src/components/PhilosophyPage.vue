@@ -5,8 +5,7 @@
       <section class="main__inner">
         <section class="philosophy__item">
           <section class="philosophy__ttl">
-            <h1 class="philosophy__title scAnimation1">企業理念</h1>
-            <h2 class="philosophy__subtitle scAnimation1">VISION</h2>
+            <MenuTitle :headingText="title" :headingSubText="subTitle"/>
           </section>
           <section class="philosophy__txt">
             <p class="philosophy__text scAnimation1">
@@ -59,8 +58,14 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import MenuTitle from "@/components/common/MenuTitle.vue";
+
+const title = ref("企業理念");
+const subTitle = ref("VISION");
+
 </script>
 
 <style>
@@ -87,25 +92,6 @@ import Footer from "@/components/common/Footer.vue";
 }
 .br-sp {
   display: none;
-}
-
-.philosophy__title {
-  font-size: 30px;
-  padding-top: 100px;
-  padding-left: 20px;
-  position: absolute;
-  z-index: 10;
-}
-
-.philosophy__subtitle {
-  font-size: 45px;
-  padding-top: 70px;
-  padding-left: 105px;
-  opacity: 0.5;
-  color: #7a808689;
-  position: absolute;
-  font-style: italic;
-  z-index: 1;
 }
 
 .philosophy__txt {

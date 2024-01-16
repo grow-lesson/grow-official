@@ -2,9 +2,9 @@
   <div class="wrap">
     <Header />
     <main class="main">
+      <MenuTitle :headingText="title" :headingSubText="subTitle"/>
       <section class="p-employeeDetail">
         <div class="p-employeeDetail__inner">
-          <h2 class="p-employeeDetail__heading">社員詳細</h2>
           <div class="p-employeeDetail__container">
             <h3 class="p-employeeDetail__title">{{ employee.introduce }}</h3>
             <figure class="p-employeeDetail__image">
@@ -39,11 +39,14 @@
 import { ref,getCurrentInstance } from 'vue';
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import MenuTitle from "@/components/common/MenuTitle.vue";
 import employees from "@/const/employees.js";
 
 const route = getCurrentInstance().appContext.config.globalProperties.$route;
 const employee = ref(employees[Number(route.params.id) - 1]);
-console.dir(employee.value.name);
+
+const title = ref("社員詳細");
+const subTitle = ref("EMPLOYEE");
 
 
 </script>
@@ -86,27 +89,6 @@ console.dir(employee.value.name);
 .p-employeeDetail__image {
   margin: 0 auto;
   text-align: center;
-}
-
-.p-employeeDetail__heading {
-  font-size: 30px;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 2;
-}
-
-.p-employeeDetail__heading::before {
-  content: "EMPLOYEE";
-  position: absolute;
-  right: -255px;
-  top: -28px;
-  font-size: 45px;
-  font-weight: bold;
-  color: #bfbebe;
-  letter-spacing: 0.05em;
-  z-index: -1;
 }
 
 .p-employeeDetail__title {
