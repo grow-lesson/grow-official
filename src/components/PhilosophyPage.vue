@@ -27,9 +27,10 @@
           </section>
         </section>
         <section class="philosophy__item">
-          <h1 class="philosophy__title--message philosophy__title philosophy__ttl scAnimation1">代表挨拶</h1>
-          <h2 class="philosophy__subtitle--message philosophy__subtitle philosophy__ttl scAnimation1">MESSAGE</h2>
-          <section class="philosophy__photo scAnimation1">
+          <section class="philosophy__ttl">
+            <MenuTitle :headingText="introduce" :headingSubText="missionTitle"/>
+          </section>
+            <section class="philosophy__photo scAnimation1">
             <img src="../assets/images/inoue.jpg" class="philosophy__inoue" alt="代表顔写真"/>
           </section>
           <section class="philosophy__txt--message">
@@ -65,6 +66,9 @@ import MenuTitle from "@/components/common/MenuTitle.vue";
 
 const title = ref("企業理念");
 const subTitle = ref("VISION");
+
+const introduce = ref("代表挨拶");
+const missionTitle = ref("MISSION");
 
 </script>
 
