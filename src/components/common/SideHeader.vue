@@ -11,7 +11,7 @@
             <li class="header-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
             <li class="header-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
             <li class="header-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
-            <li class="header-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li>
+            <!-- <li class="header-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li> -->
             <li class="header-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
           </ul>
         </nav>
@@ -27,7 +27,7 @@
           <li class="menu-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
           <li class="menu-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
           <li class="menu-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
-          <li class="menu-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li>
+          <!-- <li class="menu-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li> -->
           <li class="menu-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
         </ul>
       </div>
@@ -76,9 +76,9 @@ export default {
       router.push({ name: "EmployeeDetailPage" });
     };
 
-    const goToAccomplishmentPage = () => {
-      router.push({ name: "AccomplishmentPage" });
-    };
+    // const goToAccomplishmentPage = () => {
+    //   router.push({ name: "AccomplishmentPage" });
+    // };
 
     const goToContactPage = () => {
       router.push({ name: "ContactPage" });
@@ -106,7 +106,7 @@ export default {
       goToCompanyPage,
       goToEmployeePage,
       goToEmployeeDetailPage,
-      goToAccomplishmentPage,
+      // goToAccomplishmentPage,
       goToContactPage,
     };
   },
