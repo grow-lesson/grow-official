@@ -164,7 +164,7 @@ export default {
 }
 
 .main {
-  width: 420px;
+  width: 50%;
   overflow: auto;
   /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
   -ms-overflow-style: none;
@@ -325,6 +325,16 @@ export default {
 
 .accomplishment-block p:nth-child(2) {
   margin-top: 20px;
+}
+
+@media (min-width: 1181px) {
+
+  .top-companyImg,
+  .top-employeeImg {
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
 
 @media (max-width: 1180px) {
