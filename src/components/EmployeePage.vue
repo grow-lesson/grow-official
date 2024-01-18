@@ -81,12 +81,6 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-
-onMounted(() => {
-  // Scroll to the top of the window when the component is mounted
-  window.scrollTo(0, 0);
-});
-
 import { useRouter } from "vue-router";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
@@ -105,6 +99,11 @@ const goToEmployeeDetailPage = (employee) => {
   console.dir(employee.name);
   router.push({ name: "EmployeeDetailPage", params: { id: employee.id } });
 };
+
+onMounted(() => {
+  // Scroll to the top of the window when the component is mounted
+  window.scrollTo(0, 0);
+});
 </script>
 
 <style>

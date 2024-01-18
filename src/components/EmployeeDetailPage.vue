@@ -63,6 +63,11 @@ const employee = ref(employees[Number(route.params.id) - 1]);
 
 const title = ref("社員詳細");
 const subTitle = ref("EMPLOYEE");
+
+onMounted(() => {
+  // Scroll to the top of the window when the component is mounted
+  window.scrollTo(0, 0);
+});
 </script>
 
 <style>

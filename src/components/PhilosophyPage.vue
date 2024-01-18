@@ -94,12 +94,6 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-
-onMounted(() => {
-  // Scroll to the top of the window when the component is mounted
-  window.scrollTo(0, 0);
-});
-
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
@@ -109,6 +103,11 @@ const subTitle = ref("VISION");
 
 const introduce = ref("代表挨拶");
 const missionTitle = ref("MISSION");
+
+onMounted(() => {
+  // Scroll to the top of the window when the component is mounted
+  window.scrollTo(0, 0);
+});
 </script>
 
 <style>
