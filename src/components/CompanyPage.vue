@@ -114,7 +114,12 @@
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+
+onMounted(() => {
+  // Scroll to the top of the window when the component is mounted
+  window.scrollTo(0, 0);
+});
 
 const currentPhotoIndex = ref(0);
 const title = ref("事業内容");

@@ -46,7 +46,13 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance } from "vue";
+import { ref, getCurrentInstance, onMounted } from "vue";
+
+onMounted(() => {
+  // Scroll to the top of the window when the component is mounted
+  window.scrollTo(0, 0);
+});
+
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
