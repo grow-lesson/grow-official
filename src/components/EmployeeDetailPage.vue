@@ -34,11 +34,7 @@
                 <p>{{ employee.companyAtmosphere }}</p>
               </div>
             </div>
-<<<<<<< HEAD
-            <div class="p-employeeDetail__backBtn wow animated fadeInUp">
-=======
             <div class="employeeDetail__backBtn">
->>>>>>> 245c856731cbb275de9aed8a2fe36406849ba2c8
               <a href="">戻る</a>
             </div>
           </div>
