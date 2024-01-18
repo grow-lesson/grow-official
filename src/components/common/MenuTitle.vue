@@ -12,6 +12,7 @@ const props = defineProps(['headingText','headingSubText']);
 <style>
 .menuTitle {
   font-size: 30px;
+  font-weight: bold;
   padding-top: 100px;
   padding-left: 20px;
   position: absolute;
@@ -20,6 +21,7 @@ const props = defineProps(['headingText','headingSubText']);
 
 .menuSubTitle {
   font-size: 45px;
+  font-weight: bold;
   padding-top: 70px;
   padding-left: 105px;
   opacity: 0.5;
