@@ -34,7 +34,7 @@
                 <p>{{ employee.companyAtmosphere }}</p>
               </div>
             </div>
-            <div class="p-employeeDetail__backBtn">
+            <div class="p-employeeDetail__backBtn wow animated fadeInUp">
               <a href="">戻る</a>
             </div>
           </div>
@@ -47,12 +47,6 @@
 
 <script setup>
 import { ref, getCurrentInstance, onMounted } from "vue";
-
-onMounted(() => {
-  // Scroll to the top of the window when the component is mounted
-  window.scrollTo(0, 0);
-});
-
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
@@ -78,6 +72,10 @@ onMounted(() => {
 
 .main {
   width: 50%;
+}
+
+img {
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
