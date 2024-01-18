@@ -2,21 +2,21 @@
   <div class="wrap">
     <Header />
     <main class="main">
-      <section class="p-employeeDetail">
+      <section class="employeeDetail">
         <MenuTitle :headingText="title" :headingSubText="subTitle" />
-        <div class="p-employeeDetail__inner">
-          <div class="p-employeeDetail__container">
-            <h3 class="p-employeeDetail__title wow animated fadeInUp">
+        <div class="employeeDetail__inner">
+          <div class="employeeDetail__container">
+            <h3 class="employeeDetail__title wow animated fadeInUp">
               {{ employee.introduce }}
             </h3>
-            <figure class="p-employeeDetail__image wow animated fadeInUp">
+            <figure class="employeeDetail__image wow animated fadeInUp">
               <img
                 :src="require(`@/assets/images/${employee.image}`)"
                 alt="ダミー画像"
               />
             </figure>
-            <h4 class="p-employeeDetail__post">{{ employee.description }}</h4>
-            <div class="p-employeeDetail__additionalInfo">
+            <h4 class="employeeDetail__post">{{ employee.description }}</h4>
+            <div class="employeeDetail__additionalInfo">
               <div class="wrapBox wow animated fadeInUp">
                 <h4>入社理由</h4>
                 <p>{{ employee.joiningReason }}</p>
@@ -34,7 +34,11 @@
                 <p>{{ employee.companyAtmosphere }}</p>
               </div>
             </div>
+<<<<<<< HEAD
             <div class="p-employeeDetail__backBtn wow animated fadeInUp">
+=======
+            <div class="employeeDetail__backBtn">
+>>>>>>> 245c856731cbb275de9aed8a2fe36406849ba2c8
               <a href="">戻る</a>
             </div>
           </div>
@@ -84,7 +88,7 @@ img {
   }
 }
 
-.p-employeeDetail {
+.employeeDetail {
   width: 100%;
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;
@@ -92,7 +96,7 @@ img {
   padding-top: 100px;
 }
 
-.p-employeeDetail__inner {
+.employeeDetail__inner {
   /* max-width: 445px; */
   width: 100%;
   height: 100%;
@@ -100,19 +104,23 @@ img {
   padding: 50px 20px 40px;
 }
 
-.p-employeeDetail__image {
+.employeeDetail__title {
+  white-space: pre-wrap;
+}
+
+.employeeDetail__image {
   margin: 0 auto;
   text-align: center;
 }
 
-.p-employeeDetail__post {
+.employeeDetail__post {
   color: #000;
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
 }
 
-.p-employeeDetail__post {
+.employeeDetail__post {
   color: #000;
   font-size: 18px;
   font-weight: bold;
@@ -120,11 +128,11 @@ img {
 }
 
 /* 追加した部分のスタイル */
-.p-employeeDetail__additionalInfo {
+.employeeDetail__additionalInfo {
   margin-top: 40px;
 }
 
-.p-employeeDetail__additionalInfo h4 {
+.employeeDetail__additionalInfo h4 {
   font-size: 21px;
   line-height: 2;
   font-weight: bold;
@@ -136,17 +144,17 @@ img {
   border-bottom: solid 3px #d7d7d7;
 }
 
-.p-employeeDetail__additionalInfo p {
+.employeeDetail__additionalInfo p {
   font-size: 18px;
   margin-top: 10px;
   padding: 0 10px;
 }
 
-.p-employeeDetail__backBtn {
+.employeeDetail__backBtn {
   margin-top: 20px;
 }
 
-.p-employeeDetail__backBtn a {
+.employeeDetail__backBtn a {
   background-color: #000;
   padding: 7px 18px;
   font-size: 14px;
@@ -155,11 +163,11 @@ img {
   color: #fff;
 }
 
-.p-employeeDetail__backBtn {
+.employeeDetail__backBtn {
   margin-top: 20px;
 }
 
-.p-employeeDetail__backBtn a {
+.employeeDetail__backBtn a {
   background-color: #000;
   padding: 7px 18px;
   font-size: 14px;
