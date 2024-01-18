@@ -4,24 +4,39 @@
     <main class="main">
       <section class="employee">
         <div class="employee-head">
-          <MenuTitle :headingText="title" :headingSubText="subTitle"/>
+          <MenuTitle :headingText="title" :headingSubText="subTitle" />
         </div>
 
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
-              <li v-for="(employee, index) in employeesRef" :key="index" class="employee-item">
-                <a @click="goToEmployeeDetailPage(employee)" class="employee-link">
+              <li
+                v-for="(employee, index) in employeesRef"
+                :key="index"
+                class="employee-item "
+              >
+                <a
+                  @click="goToEmployeeDetailPage(employee)"
+                  class="employee-link"
+                >
                   <div class="employee-profile">
                     <div class="employee-imageBox">
-                      <img :src="require(`@/assets/images/${employee.image}`)" alt="" class="employee-image">
+                      <img
+                        :src="require(`@/assets/images/${employee.image}`)"
+                        alt=""
+                        class="employee-image"
+                      />
                     </div>
                     <div class="employee-work">
                       <div class="employee-joiningDayBox">
-                        <p class="employee-joiningDay">{{ employee.joiningDay }}年入社</p>
+                        <p class="employee-joiningDay">
+                          {{ employee.joiningDay }}年入社
+                        </p>
                       </div>
                       <div class="employee-descriptionBox">
-                        <p class="employee-description">{{ employee.position }}</p>
+                        <p class="employee-description">
+                          {{ employee.position }}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -30,31 +45,31 @@
             </ul>
             <div class="pageNation-box">
               <ul class="pageNation-list">
-              <li class="pageNation-item">
-                <button class="pageNation-button">
-                <div class="pageNation-previous"></div>
-                </button>
-              </li>
-              <li class="pageNation-item">
-                <button class="pageNation-button">
-                  <div class="pageNation-numberBox">
-                    <p class="pageNation-number">01</p>
-                  </div>
-                </button>
-              </li>
-              <li class="pageNation-item">
-                <button class="pageNation-button">
-                  <div class="pageNation-numberBox">
-                    <p class="pageNation-number">02</p>
-                  </div>
-                </button>
-              </li>
-              <li class="pageNation-item">
-                <button class="pageNation-button">
-                <div class="pageNation-next"></div>
-                </button>
-              </li>
-            </ul>
+                <li class="pageNation-item">
+                  <button class="pageNation-button">
+                    <div class="pageNation-previous"></div>
+                  </button>
+                </li>
+                <li class="pageNation-item">
+                  <button class="pageNation-button">
+                    <div class="pageNation-numberBox">
+                      <p class="pageNation-number">01</p>
+                    </div>
+                  </button>
+                </li>
+                <li class="pageNation-item">
+                  <button class="pageNation-button">
+                    <div class="pageNation-numberBox">
+                      <p class="pageNation-number">02</p>
+                    </div>
+                  </button>
+                </li>
+                <li class="pageNation-item">
+                  <button class="pageNation-button">
+                    <div class="pageNation-next"></div>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -65,8 +80,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
@@ -84,7 +99,6 @@ const goToEmployeeDetailPage = (employee) => {
   console.dir(employee.name);
   router.push({ name: "EmployeeDetailPage", params: { id: employee.id } });
 };
-
 </script>
 
 <style>
@@ -104,41 +118,39 @@ const goToEmployeeDetailPage = (employee) => {
   }
 }
 @media (min-width: 580px) {
-  .employee-list{
-  display: none;
-}
+  .employee-list {
+    display: none;
+  }
 }
 @media (max-width: 580px) {
-  .employee-list{
-  display: none;
-}
+  .employee-list {
+    display: none;
+  }
 }
 
-.employee-mainInner{
-  width: 80%;
+.employee-mainInner {
+  width: 90%;
   margin: 0 auto;
 }
 
-
 .employee {
   width: 100%;
-  padding: 60px 0;
+  padding: 100px 0 0;
   background-color: #f6f1f1;
 }
 
-.employee-head{
+.employee-head {
   position: relative;
   font-weight: bold;
   animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
-  width: 90%;
   margin: 0 auto;
   position: relative;
 }
 
-.employee-titleBox{
+.employee-titleBox {
   width: 150px;
   height: 80px;
   position: relative;
@@ -148,58 +160,58 @@ const goToEmployeeDetailPage = (employee) => {
   cursor: pointer;
 }
 
-.employee-main{
+.employee-main {
   animation-name: fadeUpAnime;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0;
-  margin-top: 160px;
+  margin-top: 60px;
 }
 
-.employee-list{
-  width: 96%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.employee-item{
-  width: 300px;
-  margin-top: 20px;
-}
-
-
-.employee-image{
+.employee-list {
   width: 100%;
-  height: 180px;
-  border-radius: 20px 20px 0 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.employee-name{
+.employee-item {
+  width: 100%;
+  width: 100%;
+  background: azure;
+  border-radius: 15px;
+}
+
+.employee-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.employee-name {
   font-size: 25px;
   font-weight: bold;
 }
 
-.employee-joiningDay{
+.employee-joiningDay {
   font-size: 18px;
 }
 
-.employee-descriptionBox{
+.employee-descriptionBox {
   margin-top: 15px;
 }
 
-.employee-description{
+.employee-description {
   font-size: 18px;
 }
 
-.employee-work{
-  background-color: azure;
+.employee-work {
   padding: 18px;
-  border-radius: 0 0 20px 20px;
 }
 
-.pageNation-box{
+.pageNation-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,18 +219,18 @@ const goToEmployeeDetailPage = (employee) => {
   margin-top: 60px;
 }
 
-.pageNation-list{
+.pageNation-list {
   display: flex;
 }
 
-.pageNation-item{
+.pageNation-item {
   background-color: azure;
   width: 30px;
   height: 30px;
   border: solid 1px black;
 }
 
-.pageNation-item:nth-child(n+2){
+.pageNation-item:nth-child(n + 2) {
   margin-left: 15px;
 }
 
@@ -228,12 +240,11 @@ const goToEmployeeDetailPage = (employee) => {
   padding: 10px;
 }
 
-.pageNation-numberBox{
+.pageNation-numberBox {
   width: 30px;
-
 }
 
-.pageNation-number{
+.pageNation-number {
   text-align: center;
   font-size: 13px;
   font-weight: bold;
@@ -241,7 +252,7 @@ const goToEmployeeDetailPage = (employee) => {
 }
 
 .pageNation-previous::before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-top: solid 2px #949494;
@@ -259,7 +270,7 @@ const goToEmployeeDetailPage = (employee) => {
 }
 
 .pageNation-next::before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-top: solid 2px #949494;
@@ -280,5 +291,4 @@ const goToEmployeeDetailPage = (employee) => {
     transform: translateY(0);
   }
 }
-
 </style>

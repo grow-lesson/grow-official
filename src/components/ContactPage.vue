@@ -2,8 +2,8 @@
   <div class="wrap">
     <Header />
     <main class="main">
-      <MenuTitle :headingText="title" :headingSubText="subTitle"/>
       <section class="p-contact">
+        <MenuTitle :headingText="title" :headingSubText="subTitle"/>
         <div class="p-contact__inner">
           <form action="../../../php/contact.php" method="post">
             <div class="p-contact__box">

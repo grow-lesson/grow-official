@@ -169,11 +169,12 @@ function changeTabByTitle(index) {
 
 .p-company {
   max-width: 100%;
+  padding-top: 100px;
   background-color: #eae7e7;
 }
 
 .p-company__content {
-  padding-top: 180px;
+  padding-top: 60px;
 }
 
 .p-company__top {

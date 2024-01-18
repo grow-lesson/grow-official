@@ -1,6 +1,8 @@
 <template>
-  <h1 class="menuTitle">{{ props.headingText }}</h1>
-  <h2 class="menuSubTitle">{{ props.headingSubText }}</h2>
+  <div class="titleBox">
+    <h2 class="menuTitle">{{ props.headingText }}</h2>
+    <p class="menuSubTitle">{{ props.headingSubText }}</p>
+  </div>
 </template>
 
 <script setup>
@@ -10,24 +12,27 @@ const props = defineProps(['headingText','headingSubText']);
 </script>
 
 <style>
+.titleBox {
+  position: relative;
+}
+
 .menuTitle {
   font-size: 30px;
   font-weight: bold;
-  padding-top: 100px;
   padding-left: 20px;
-  position: absolute;
   z-index: 10;
+  line-height: 2.7;
 }
 
 .menuSubTitle {
   font-size: 45px;
   font-weight: bold;
-  padding-top: 70px;
-  padding-left: 105px;
+  padding-left: 110px;
   opacity: 0.5;
   color: #7a808689;
   position: absolute;
-  font-style: italic;
+  top: 0;
+  line-height: 1;
   z-index: 1;
 }
 </style>

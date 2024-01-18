@@ -2,13 +2,16 @@
   <div class="wrap">
     <Header />
     <main class="main">
-      <MenuTitle :headingText="title" :headingSubText="subTitle"/>
       <section class="p-employeeDetail">
+        <MenuTitle :headingText="title" :headingSubText="subTitle" />
         <div class="p-employeeDetail__inner">
           <div class="p-employeeDetail__container">
             <h3 class="p-employeeDetail__title">{{ employee.introduce }}</h3>
             <figure class="p-employeeDetail__image">
-              <img :src="require(`@/assets/images/${employee.image}`)" alt="ダミー画像" />
+              <img
+                :src="require(`@/assets/images/${employee.image}`)"
+                alt="ダミー画像"
+              />
             </figure>
             <h4 class="p-employeeDetail__post">{{ employee.description }}</h4>
             <div class="p-employeeDetail__additionalInfo">
@@ -36,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref,getCurrentInstance } from 'vue';
+import { ref, getCurrentInstance } from "vue";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
@@ -47,8 +50,6 @@ const employee = ref(employees[Number(route.params.id) - 1]);
 
 const title = ref("社員詳細");
 const subTitle = ref("EMPLOYEE");
-
-
 </script>
 
 <style>
@@ -72,6 +73,7 @@ const subTitle = ref("EMPLOYEE");
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;
   background-color: #f6f1f1;
+  padding-top: 100px;
 }
 
 .p-employeeDetail__inner {
@@ -79,23 +81,11 @@ const subTitle = ref("EMPLOYEE");
   width: 100%;
   height: 100%;
   background-color: #f6f1f1;
-  padding: 100px 20px 40px;
-}
-
-.p-employeeDetail__container {
-  margin-top: 30px;
+  padding: 50px 20px 40px;
 }
 
 .p-employeeDetail__image {
   margin: 0 auto;
-  text-align: center;
-}
-
-.p-employeeDetail__title {
-  font-size: 32px;
-  position: relative;
-  margin-bottom: 30px;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -104,14 +94,6 @@ const subTitle = ref("EMPLOYEE");
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
-}
-
-.p-employeeDetail__title {
-  font-size: 32px;
-  position: relative;
-  margin-bottom: 30px;
-  font-weight: 600;
-  text-align: center;
 }
 
 .p-employeeDetail__post {
@@ -127,14 +109,21 @@ const subTitle = ref("EMPLOYEE");
 }
 
 .p-employeeDetail__additionalInfo h4 {
-  font-size: 24px;
+  font-size: 21px;
+  line-height: 2;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 30px;
+  padding: 5px 10px;
+  color: #494949;
+  background: #f4f4f4;
+  border-left: solid 5px #7db4e6;
+  border-bottom: solid 3px #d7d7d7;
 }
 
 .p-employeeDetail__additionalInfo p {
   font-size: 18px;
   margin-top: 10px;
+  padding: 0 10px;
 }
 
 .p-employeeDetail__backBtn {
@@ -168,5 +157,39 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+
+h3 {
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 45px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #eee;
+  font-size: 30px;
+}
+
+h3:before,
+h3:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  background: #eee;
+}
+
+h3:before {
+  bottom: -15px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+h3:after {
+  bottom: -30px;
+  left: 50px;
+  width: 15px;
+  height: 15px;
 }
 </style>
