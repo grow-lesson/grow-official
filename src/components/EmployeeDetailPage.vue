@@ -92,7 +92,7 @@ const subTitle = ref("EMPLOYEE");
 }
 
 .p-employeeDetail__title {
-  font-size: 36px;
+  font-size: 32px;
   position: relative;
   margin-bottom: 30px;
   font-weight: 600;
@@ -107,7 +107,7 @@ const subTitle = ref("EMPLOYEE");
 }
 
 .p-employeeDetail__title {
-  font-size: 36px;
+  font-size: 32px;
   position: relative;
   margin-bottom: 30px;
   font-weight: 600;
