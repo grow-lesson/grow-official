@@ -6,8 +6,10 @@
         <MenuTitle :headingText="title" :headingSubText="subTitle" />
         <div class="p-employeeDetail__inner">
           <div class="p-employeeDetail__container">
-            <h3 class="p-employeeDetail__title">{{ employee.introduce }}</h3>
-            <figure class="p-employeeDetail__image">
+            <h3 class="p-employeeDetail__title wow animated fadeInUp">
+              {{ employee.introduce }}
+            </h3>
+            <figure class="p-employeeDetail__image wow animated fadeInUp">
               <img
                 :src="require(`@/assets/images/${employee.image}`)"
                 alt="ダミー画像"
@@ -15,17 +17,22 @@
             </figure>
             <h4 class="p-employeeDetail__post">{{ employee.description }}</h4>
             <div class="p-employeeDetail__additionalInfo">
-              <h4>入社理由</h4>
-              <p>{{ employee.joiningReason }}</p>
-
-              <h4>やりがい</h4>
-              <p>{{ employee.motivation }}</p>
-
-              <h4>入社当時と比べて成長できた部分</h4>
-              <p>{{ employee.growth }}</p>
-
-              <h4>株式会社GROWや仲間の雰囲気について</h4>
-              <p>{{ employee.companyAtmosphere }}</p>
+              <div class="wrapBox wow animated fadeInUp">
+                <h4>入社理由</h4>
+                <p>{{ employee.joiningReason }}</p>
+              </div>
+              <div class="wrapBox wow animated fadeInUp">
+                <h4>やりがい</h4>
+                <p>{{ employee.motivation }}</p>
+              </div>
+              <div class="wrapBox wow animated fadeInUp">
+                <h4>入社当時と比べて成長できた部分</h4>
+                <p>{{ employee.growth }}</p>
+              </div>
+              <div class="wrapBox wow animated fadeInUp">
+                <h4>株式会社GROWや仲間の雰囲気について</h4>
+                <p>{{ employee.companyAtmosphere }}</p>
+              </div>
             </div>
             <div class="p-employeeDetail__backBtn">
               <a href="">戻る</a>
@@ -159,7 +166,6 @@ footer {
   width: 100%;
 }
 
-
 h3 {
   text-align: center;
   position: relative;
@@ -174,7 +180,7 @@ h3 {
 h3:before,
 h3:after {
   position: absolute;
-  content: '';
+  content: "";
   border-radius: 50%;
   background: #eee;
 }

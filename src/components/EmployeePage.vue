@@ -13,7 +13,7 @@
               <li
                 v-for="(employee, index) in employeesRef"
                 :key="index"
-                class="employee-item "
+                class="employee-item wow animated fadeInUp"
               >
                 <a
                   @click="goToEmployeeDetailPage(employee)"
@@ -142,10 +142,10 @@ const goToEmployeeDetailPage = (employee) => {
 .employee-head {
   position: relative;
   font-weight: bold;
-  animation-name: fadeUpAnime;
+  /* animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  opacity: 0;
+  opacity: 0; */
   margin: 0 auto;
   position: relative;
 }

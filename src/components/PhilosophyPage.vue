@@ -133,6 +133,9 @@ const missionTitle = ref("MISSION");
 }
 .philosophy__txt {
   text-align: center;
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .philosophy__text {
@@ -151,6 +154,7 @@ const missionTitle = ref("MISSION");
 
 .philosophy__text--two {
   padding-top: 0px;
+  margin-bottom: 60px;
 }
 
 .philosophy__title--message {
@@ -163,7 +167,7 @@ const missionTitle = ref("MISSION");
   color: #7a808689;
 }
 .philosophy__photo {
-  padding-top: 220px;
+  padding-top: 20px;
   text-align: center;
 }
 .philosophy__inoue {

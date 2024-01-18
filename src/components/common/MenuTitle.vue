@@ -1,5 +1,5 @@
 <template>
-  <div class="titleBox">
+  <div class="titleBox wow animated fadeInUp">
     <h2 class="menuTitle">{{ props.headingText }}</h2>
     <p class="menuSubTitle">{{ props.headingSubText }}</p>
   </div>
