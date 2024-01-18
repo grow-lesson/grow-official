@@ -68,13 +68,14 @@ const subTitle = ref("CONTACT");
   min-height: calc(100vh - 50px);
   padding-bottom: 50px;
   background-color: #f6f1f1;
+  padding-top: 100px;
 }
 
 .p-contact__inner {
   /* max-width: 445px; */
   width: 100%;
   height: 100%;
-  padding: 100px 20px 40px;
+  padding: 40px 20px;
 }
 
 .p-contact__submit {
