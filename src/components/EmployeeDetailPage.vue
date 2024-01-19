@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="employeeDetail__backBtn">
-              <a href="">戻る</a>
+              <a @click="goToEmployeePage()">戻る</a>
             </div>
           </div>
         </div>
@@ -51,12 +51,20 @@ import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
 import employees from "@/const/employees.js";
+import { useRouter } from "vue-router";
 
 const route = getCurrentInstance().appContext.config.globalProperties.$route;
 const employee = ref(employees[Number(route.params.id) - 1]);
 
 const title = ref("社員詳細");
 const subTitle = ref("EMPLOYEE");
+
+const router = useRouter();
+
+// Vue Routerを使用してページ間の遷移を行うメソッド
+const goToEmployeePage = () => {
+  router.push({name: "EmployeePage"});
+};
 
 onMounted(() => {
   // Scroll to the top of the window when the component is mounted
