@@ -96,12 +96,10 @@ const router = useRouter();
 
 // Vue Routerを使用してページ間の遷移を行うメソッド
 const goToEmployeeDetailPage = (employee) => {
-  console.dir(employee.name);
   router.push({ name: "EmployeeDetailPage", params: { id: employee.id } });
 };
 
 onMounted(() => {
-  // Scroll to the top of the window when the component is mounted
   window.scrollTo(0, 0);
 });
 </script>
