@@ -78,7 +78,7 @@ img {
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1180px) {
   .main {
     width: 100%;
   }
@@ -210,5 +210,20 @@ h3:after {
   left: 50px;
   width: 15px;
   height: 15px;
+}
+
+@media (max-width: 767px) {
+h3 {
+  font-size: 24px;
+}
+.employeeDetail__additionalInfo h4 {
+  font-size: 16px;
+}
+.employeeDetail__additionalInfo p {
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
 }
 </style>

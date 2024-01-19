@@ -35,4 +35,26 @@ const props = defineProps(['headingText','headingSubText']);
   line-height: 1;
   z-index: 1;
 }
+
+@media screen and (max-width: 767px) {
+.menuTitle {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 20px;
+  z-index: 10;
+  line-height: 2.7;
+}
+.menuSubTitle {
+  font-size: 35px;
+    font-weight: bold;
+    padding-left: 97px;
+  opacity: 0.5;
+  color: #7a808689;
+  position: absolute;
+  top: 0;
+  line-height: 1;
+  z-index: 1;
+}
+}
+
 </style>

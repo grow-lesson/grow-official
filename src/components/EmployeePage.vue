@@ -147,10 +147,7 @@ onMounted(() => {
 .employee-head {
   position: relative;
   font-weight: bold;
-  /* animation-name: fadeUpAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0; */
+
   margin: 0 auto;
   position: relative;
 }
@@ -295,5 +292,22 @@ onMounted(() => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media (max-width: 767px) {
+.employee-list {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.employee-joiningDay {
+  font-size: 16px;
+}
+
+.employee-description {
+  font-size: 16px;
+}
 }
 </style>

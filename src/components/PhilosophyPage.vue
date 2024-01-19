@@ -221,13 +221,13 @@ onMounted(() => {
     display: block;
   }
   .philosophy__name {
-    font-size: 12px;
+    font-size: 14px;
   }
   .philosophy__text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .philosophy__text--block {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 </style>

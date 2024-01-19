@@ -61,11 +61,12 @@ onMounted(() => {
   width: 50%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1180px) {
   .main {
     width: 100%;
   }
 }
+
 
 .p-contact {
   width: 100%;
@@ -141,5 +142,18 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+form {
+  padding: 0 0px;
+  font-size: 16px;
+}
+.p-contact__inner {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+}
+
 }
 </style>

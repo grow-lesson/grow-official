@@ -172,6 +172,12 @@ onMounted(() => {
   width: 50%;
 }
 
+@media screen and (max-width: 1180px) {
+  .main {
+    width: 100%;
+  }
+}
+
 .p-company {
   max-width: 100%;
   padding-top: 100px;
@@ -205,9 +211,6 @@ onMounted(() => {
   align-items: center;
   text-align: center;
   width: 100%;
-}
-
-.p-company__inner {
 }
 
 .p-company__photo {
@@ -275,11 +278,8 @@ onMounted(() => {
 .demophoto {
   display: flex;
   justify-content: center;
-  /* 水平方向に中央に配置 */
   align-items: center;
-  /* 垂直方向に中央に配置 */
   height: 100%;
-  /* 親要素に対して高さ100%で占める */
   position: relative;
 }
 .demophoto img {
@@ -337,7 +337,7 @@ onMounted(() => {
 }
 
 /*SPレスポンシズ */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header {
     display: none;
   }
@@ -349,5 +349,51 @@ onMounted(() => {
   .main {
     width: 100%;
   }
+  .p-company__article {
+  font-size: 14px;
+  line-height: 2;
+  padding: 20px;
+}
+.p-company__subheading {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.p-company__detali {
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.p-company__item {
+  border-bottom: 1px solid #cccdce;
+  padding: 5px 0;
+}
+
+h2 {
+  padding: 8px 0px;
+    font-size: 10px;
+}
+
+.selected-title {
+  background-color: #777;
+  line-height: 30px;
+  text-align: center;
+  max-height: 100%;
+  color: #fff;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  color: #fff;
+  background-color: transparent !important;
+}
 }
 </style>
