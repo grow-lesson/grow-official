@@ -35,82 +35,53 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
+const isMobile = ref(false);
+const router = useRouter();
 
-export default {
-  name: "SideHeader",
-  setup() {
-    const isMobile = ref(false);
-    const showMenu = ref(false);
-    const router = useRouter();
-
-    const checkMobileScreen = () => {
-      isMobile.value = window.innerWidth <= 834;
-    };
-
-    const toggleMenu = () => {
-      showMenu.value = !showMenu.value;
-    };
-
-    // Vue Routerを使用してページ間の遷移を行うメソッド
-    const goToTopPage = () => {
-      router.push({ name: "TopPage" });
-    };
-
-    const goToPhilosophyPage = () => {
-      router.push({ name: "PhilosophyPage" });
-    };
-
-    const goToCompanyPage = () => {
-      router.push({ name: "CompanyPage" });
-    };
-
-    const goToEmployeePage = () => {
-      router.push({ name: "EmployeePage" });
-    };
-
-    const goToEmployeeDetailPage = () => {
-      router.push({ name: "EmployeeDetailPage" });
-    };
-
-    // const goToAccomplishmentPage = () => {
-    //   router.push({ name: "AccomplishmentPage" });
-    // };
-
-    const goToContactPage = () => {
-      router.push({ name: "ContactPage" });
-    };
-
-    const handleResize = () => {
-      checkMobileScreen();
-    };
-
-    onMounted(() => {
-      checkMobileScreen();
-      window.addEventListener("resize", handleResize);
-    });
-
-    onUnmounted(() => {
-      window.removeEventListener("resize", handleResize);
-    });
-
-    return {
-      isMobile,
-      showMenu,
-      toggleMenu,
-      goToTopPage,
-      goToPhilosophyPage,
-      goToCompanyPage,
-      goToEmployeePage,
-      goToEmployeeDetailPage,
-      // goToAccomplishmentPage,
-      goToContactPage,
-    };
-  },
+const checkMobileScreen = () => {
+  isMobile.value = window.innerWidth <= 834;
 };
+
+const goToTopPage = () => {
+  router.push({ name: "TopPage" });
+};
+
+const goToPhilosophyPage = () => {
+  router.push({ name: "PhilosophyPage" });
+};
+
+const goToCompanyPage = () => {
+  router.push({ name: "CompanyPage" });
+};
+
+const goToEmployeePage = () => {
+  router.push({ name: "EmployeePage" });
+};
+
+// const goToAccomplishmentPage = () => {
+//   router.push({ name: "AccomplishmentPage" });
+// };
+
+const goToContactPage = () => {
+  router.push({ name: "ContactPage" });
+};
+
+const handleResize = () => {
+  checkMobileScreen();
+};
+
+onMounted(() => {
+  checkMobileScreen();
+  window.addEventListener("resize", handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", handleResize);
+});
 </script>
 
 <style scoped>
