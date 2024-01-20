@@ -117,12 +117,12 @@ onMounted(() => {
 
 .main {
   background-color: #f6f1f1;
-  line-height: 2.6;
 }
 
 .main__inner {
   padding: 100px 20px 0;
   font-size: 18px;
+  line-height: 2.6;
 }
 .philosophy__ttl {
   position: relative;
@@ -144,13 +144,13 @@ onMounted(() => {
 }
 
 .philosophy__text {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   padding-top: 60px;
 }
 
 .philosophy__text--block {
-  font-size: 20px;
+  font-size: 18px;
   color: #27a7cc;
   padding-bottom: 30px;
   display: inline-block;
@@ -176,8 +176,8 @@ onMounted(() => {
   text-align: center;
 }
 .philosophy__inoue {
-  border-radius: 35px;
-  width: 70%;
+  /* border-radius: 35px; */
+  width: 80%;
   object-fit: cover;
   object-position: 100% 5%;
 }
