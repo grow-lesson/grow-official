@@ -10,11 +10,7 @@
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
-              <li
-                v-for="(employee, index) in employeesRef"
-                :key="index"
-                class="employee-item wow animated fadeInUp"
-              >
+              <li v-for="(employee, index) in displayedEmployees" :key="index" class="employee-item wow animated fadeInUp">
                 <a
                   @click="goToEmployeeDetailPage(employee)"
                   class="employee-link"
@@ -46,26 +42,19 @@
             <div class="pageNation-box">
               <ul class="pageNation-list">
                 <li class="pageNation-item">
-                  <button class="pageNation-button">
+                  <button @click="goToPage(currentPage.value - 1)" :disabled="currentPage.value === 1" class="pageNation-button">
                     <div class="pageNation-previous"></div>
                   </button>
                 </li>
-                <li class="pageNation-item">
-                  <button class="pageNation-button">
+                <li v-for="page in totalPages" :key="page" class="pageNation-item">
+                  <button @click="goToPage(page)" :class="{ active: currentPage.value === page }" class="pageNation-button">
                     <div class="pageNation-numberBox">
-                      <p class="pageNation-number">01</p>
+                      <p class="pageNation-number">{{ page }}</p>
                     </div>
                   </button>
                 </li>
                 <li class="pageNation-item">
-                  <button class="pageNation-button">
-                    <div class="pageNation-numberBox">
-                      <p class="pageNation-number">02</p>
-                    </div>
-                  </button>
-                </li>
-                <li class="pageNation-item">
-                  <button class="pageNation-button">
+                  <button @click="goToPage(currentPage.value + 1)" :disabled="currentPage.value === totalPages" class="pageNation-button">
                     <div class="pageNation-next"></div>
                   </button>
                 </li>
@@ -80,7 +69,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { useRouter } from "vue-router";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
@@ -98,6 +87,23 @@ const router = useRouter();
 const goToEmployeeDetailPage = (employee) => {
   router.push({ name: "EmployeeDetailPage", params: { id: employee.id } });
 };
+
+const itemsPerPage = 6; // 1ページあたりの表示数
+const currentPage = ref(1);
+const totalPages = Math.ceil(employeesRef.value.length / itemsPerPage);
+
+const displayedEmployees = computed(() => {
+  const startIndex = (currentPage.value - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  return employeesRef.value.slice(startIndex, endIndex);
+});
+
+const goToPage = (page) => {
+  if (page >= 1 && page <= totalPages) {
+    currentPage.value = page;
+  }
+};
+
 
 onMounted(() => {
   window.scrollTo(0, 0);
@@ -217,6 +223,7 @@ onMounted(() => {
   align-items: center;
   height: 30px;
   margin-top: 60px;
+  padding-bottom: 40px;
 }
 
 .pageNation-list {
@@ -228,6 +235,9 @@ onMounted(() => {
   width: 30px;
   height: 30px;
   border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pageNation-item:nth-child(n + 2) {
@@ -258,8 +268,8 @@ onMounted(() => {
   border-top: solid 2px #949494;
   border-right: solid 2px #949494;
   position: absolute;
-  left: 10px;
-  top: 8px;
+  left: 8px;
+  top: 10px;
   transform: rotate(-135deg);
 }
 
@@ -276,8 +286,8 @@ onMounted(() => {
   border-top: solid 2px #949494;
   border-right: solid 2px #949494;
   position: absolute;
-  left: 8px;
-  top: 8px;
+  left: 4px;
+  top: 10px;
   transform: rotate(45deg);
 }
 @keyframes fadeUpAnime {
