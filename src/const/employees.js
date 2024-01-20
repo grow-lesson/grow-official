@@ -128,7 +128,7 @@ const employees = [
     joiningDay: "2023",
     position: "テスター",
     image: "takahashi.jpeg",
-    introduce: "「デザインにも強いエンジニア」を目指しています！",
+    introduce: "為せば成る 為さねば成らぬ何事も",
     joiningReason:
       "GROWは設立から数年しか経っていないので、会社を大きくしていく一員になりたいと思い入社しました。",
     motivation:
@@ -220,7 +220,7 @@ const employees = [
     joiningDay: "2021",
     position: "ディレクター",
     image: "higashi.jpg",
-    introduce: "",
+    introduce: "小さな改善の積み重ねが会社全体の重要な生産性を生み出す",
     joiningReason:
       "代表取締役のお人柄や社名「GROW」に込められた想い、SESのため職場環境を変えやすいことに魅力を感じ入社しました。特に代表から「自分が会社で儲けようとは思っていない。若い人が自社で成長してステップアップしていってもらいたい」とお聞きしたことが大きな動機になりました。",
     motivation:

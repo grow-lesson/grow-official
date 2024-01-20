@@ -61,9 +61,12 @@ const subTitle = ref("EMPLOYEE");
 
 const router = useRouter();
 
+const itemsPerPage = 6; // 1ページあたりの表示数
+
 // Vue Routerを使用してページ間の遷移を行うメソッド
 const goToEmployeePage = () => {
-  router.push({name: "EmployeePage"});
+  const currentPageNumber = Math.ceil((Number(route.params.id) - 1) / itemsPerPage);
+  router.push({ name: "EmployeePage", query: { page: currentPageNumber } });
 };
 
 onMounted(() => {
