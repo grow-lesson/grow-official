@@ -7,12 +7,12 @@
         </div>
         <nav class="header-nav">
           <ul class="header-list">
-            <li class="header-item"><a @click="goToTopPage" class="header-link">Top</a></li>
-            <li class="header-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
-            <li class="header-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
-            <li class="header-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
-            <!-- <li class="header-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li> -->
-            <li class="header-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
+            <li @click="goToTopPage" class="header-item"><a class="header-link">Top</a></li>
+            <li @click="goToPhilosophyPage" class="header-item"><a class="header-link">企業理念</a></li>
+            <li @click="goToCompanyPage" class="header-item"><a class="header-link">事業内容</a></li>
+            <li @click="goToEmployeePage" class="header-item"><a class="header-link">社員紹介</a></li>
+            <!-- <li @click="goToAccomplishmentPage" class="header-item"><a class="header-link">案件実績</a></li> -->
+            <li  @click="goToContactPage" class="header-item"><a class="header-link">お問い合わせ</a></li>
           </ul>
         </nav>
       </div>
@@ -23,12 +23,12 @@
       <label for="menu-btn-check" class="menu-btn"><span></span></label>
       <div class="menu-content">
         <ul class="menu-list">
-          <li class="menu-item"><a @click="goToTopPage" class="header-link">Top</a></li>
-          <li class="menu-item"><a @click="goToPhilosophyPage" class="header-link">企業理念</a></li>
-          <li class="menu-item"><a @click="goToCompanyPage" class="header-link">事業内容</a></li>
-          <li class="menu-item"><a @click="goToEmployeePage" class="header-link">社員紹介</a></li>
-          <!-- <li class="menu-item"><a @click="goToAccomplishmentPage" class="header-link">案件実績</a></li> -->
-          <li class="menu-item"><a @click="goToContactPage" class="header-link">お問い合わせ</a></li>
+          <li @click="goToTopPage" class="menu-item"><a class="header-link">Top</a></li>
+          <li @click="goToPhilosophyPage" class="menu-item"><a class="header-link">企業理念</a></li>
+          <li @click="goToCompanyPage" class="menu-item"><a class="header-link">事業内容</a></li>
+          <li @click="goToEmployeePage" class="menu-item"><a class="header-link">社員紹介</a></li>
+          <!-- <li @click="goToAccomplishmentPage" class="menu-item"><a class="header-link">案件実績</a></li> -->
+          <li @click="goToContactPage" class="menu-item"><a class="header-link">お問い合わせ</a></li>
         </ul>
       </div>
     </div>
@@ -89,7 +89,7 @@ onUnmounted(() => {
   position: fixed;
   width: 555px;
   height: 100vh;
-  background: linear-gradient(to bottom, #B0D3E1, #1B6D92);
+  /* background: linear-gradient(to bottom, #B0D3E1, #1B6D92); */
 }
 
 .header-blank{
@@ -202,14 +202,14 @@ onUnmounted(() => {
 
 /* */
 .menu-content {
-  width: 50%;
+  width: 80%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 100%;
   /*leftの値を変更してメニューを画面外へ*/
   z-index: 89;
-  background-color: #3584bb;
+  background: linear-gradient(to bottom, #B0D3E1, #1B6D92);
   transition: all 0.5s;
   /*アニメーション設定*/
 }
@@ -249,6 +249,10 @@ onUnmounted(() => {
 
 #menu-btn-check:checked~.menu-content {
   left: 50%;
+}
+
+.menu-item {
+  cursor: pointer;
 }
 
 @media (min-width: 1181px) {
