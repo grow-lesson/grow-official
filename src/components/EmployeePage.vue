@@ -89,7 +89,10 @@ const goToEmployeeDetailPage = (employee) => {
 };
 
 const itemsPerPage = 6; // 1ページあたりの表示数
-const currentPage = ref(1);
+
+const currentPageFromParams = Number(router.currentRoute.value.query.page) || 1;
+const currentPage = ref(currentPageFromParams);
+
 const totalPages = Math.ceil(employeesRef.value.length / itemsPerPage);
 
 const displayedEmployees = computed(() => {
@@ -99,9 +102,9 @@ const displayedEmployees = computed(() => {
 });
 
 const goToPage = (page) => {
-  console.log(page);
   if (page >= 1 && page <= totalPages) {
     currentPage.value = page;
+    window.scrollTo(0, 0);
   }
 };
 
