@@ -128,7 +128,8 @@ const employees = [
     joiningDay: "2023",
     position: "テスター",
     image: "takahashi.jpeg",
-    introduce: "為せば成る 為さねば成らぬ何事も",
+    introduce: `為せば成る
+    為さねば成らぬ何事も`,
     joiningReason:
       "GROWは設立から数年しか経っていないので、会社を大きくしていく一員になりたいと思い入社しました。",
     motivation:
