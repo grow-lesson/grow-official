@@ -42,7 +42,7 @@
             <div class="pageNation-box">
               <ul class="pageNation-list">
                 <li class="pageNation-item">
-                  <button @click="goToPage(currentPage.value - 1)" :disabled="currentPage.value === 1" class="pageNation-button">
+                  <button @click="goToPage(currentPage - 1)" :disabled="currentPage.value === 1" class="pageNation-button">
                     <div class="pageNation-previous"></div>
                   </button>
                 </li>
@@ -54,7 +54,7 @@
                   </button>
                 </li>
                 <li class="pageNation-item">
-                  <button @click="goToPage(currentPage.value + 1)" :disabled="currentPage.value === totalPages" class="pageNation-button">
+                  <button @click="goToPage(currentPage + 1)" :disabled="currentPage.value === totalPages" class="pageNation-button">
                     <div class="pageNation-next"></div>
                   </button>
                 </li>
@@ -99,6 +99,7 @@ const displayedEmployees = computed(() => {
 });
 
 const goToPage = (page) => {
+  console.log(page);
   if (page >= 1 && page <= totalPages) {
     currentPage.value = page;
   }
@@ -108,6 +109,8 @@ const goToPage = (page) => {
 onMounted(() => {
   window.scrollTo(0, 0);
 });
+
+
 </script>
 
 <style>
