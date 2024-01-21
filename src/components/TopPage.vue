@@ -2,134 +2,103 @@
   <div class="wrap">
     <Header />
     <main class="main">
-      <div class="top-contents">
-        <div class="top-hero">
+      <div class="top-hero">
+        <div class="top-heroBackImg">
+          <div class="top-logo">
+            <img src="../assets/growlogo.png">
+          </div>
+          <div class="top-scrolldown" @click="scrollToSection('top-philosophy')"><span>Scroll</span>
+          </div>
         </div>
-        <section class="top-philosophy">
-          <section class="heading">
-            <MenuTitle :headingText="title[0]" :headingSubText="subTitle[0]" />
-          </section>
-          <div class="top-philosophy__textBox">
-            <p class="top-philosophy__text">「自分の可能性に気づく経験」や「人の力」を伸ばすことが本当に「環境」に依存するものであるならば、
-              誰もが教育を受けられる環境が整えられるべきです。
-            </p>
-            <p class="top-philosophy__markup">弊社ではエンジニアになる準備を<br>全面的に支援できる環境を整えております。</p>
-          </div>
-          <div class="top-read">
-            <a @click="goToPhilosophyPage">
-              <p>ReadMore>></p>
-            </a>
-          </div>
-        </section>
-        <section class="top-company">
-          <section class="heading">
-            <MenuTitle :headingText="title[1]" :headingSubText="subTitle[1]" />
-          </section>
-          <div class="top-companyImg">
-            <img src="../assets/business01.jpg">
-          </div>
-          <div class="top-philosophy__textBox">
-            <p class="top-philosophy__text">弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
-            </p>
-          </div>
-          <div class="top-read">
-            <a @click="goToCompanyPage">
-              <p>ReadMore>></p>
-            </a>
-          </div>
-        </section>
-        <section class="top-employee">
-          <section class="heading">
-            <MenuTitle :headingText="title[2]" :headingSubText="subTitle[2]" />
-          </section>
-          <div class="top-employeeImg">
-            <img src="../assets/whole.jpg">
-          </div>
-          <div class="top-read">
-            <a @click="goToEmployeePage">
-              <p>ReadMore>></p>
-            </a>
-          </div>
-        </section>
-        <section class="top-contact">
-          <div class="top-buttonWrap">
-            <button class="top-button" @click="goToContactPage">お問い合わせはコチラ</button>
-          </div>
-        </section>
       </div>
+      <section class="top-philosophy" id="top-philosophy">
+        <section class="heading">
+          <MenuTitle :headingText="title[0]" :headingSubText="subTitle[0]" />
+        </section>
+        <div class="top-textBox">
+          <p class="top-text">「自分の可能性に気づく経験」や「人の力」を伸ばすことが本当に「環境」に依存するものであるならば、
+            誰もが教育を受けられる環境が整えられるべきです。
+          </p>
+          <p class="top-markup">弊社ではエンジニアになる準備を<br>全面的に支援できる環境を整えております。</p>
+        </div>
+        <div class="top-read">
+          <a @click="goToPage('Philosophy')">
+            <p>ＲＥＡＤＭＯＲＥ ＞＞</p>
+          </a>
+        </div>
+      </section>
+      <section class="top-company">
+        <section class="heading">
+          <MenuTitle :headingText="title[1]" :headingSubText="subTitle[1]" />
+        </section>
+        <div class="top-companyImg">
+          <img src="../assets/business01.jpg">
+        </div>
+        <div class="top-textBox">
+          <p class="top-text">弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
+          </p>
+        </div>
+        <div class="top-read">
+          <a @click="goToPage('Company')">
+            <p>ＲＥＡＤＭＯＲＥ ＞＞</p>
+          </a>
+        </div>
+      </section>
+      <section class="top-employee">
+        <section class="heading">
+          <MenuTitle :headingText="title[2]" :headingSubText="subTitle[2]" />
+        </section>
+        <div class="top-employeeImg">
+          <img src="../assets/whole.jpg">
+        </div>
+        <div class="top-textBox">
+          <p class="top-text">弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
+          </p>
+        </div>
+        <div class="top-read">
+          <a @click="goToPage('Employee')">
+            <p>ＲＥＡＤＭＯＲＥ ＞＞</p>
+          </a>
+        </div>
+      </section>
+      <section class="top-contact">
+        <div class="top-buttonWrap">
+          <button class="top-button" @click="goToPage('Contact')">お問い合わせはコチラ</button>
+        </div>
+      </section>
       <Footer />
     </main>
   </div>
 </template>
 
-<script>
+<script setup>
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
-import { ref } from 'vue';
-import { useRouter, } from 'vue-router';
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
-const title = ref([
-  "企業理念",
-  "事業内容",
-  "社員紹介",
-]);
-const subTitle = ref([
-  "VISION",
-  "BUSINESS",
-  "EMPLOYEE",
-]);
-console.log(title)
-export default {
-  name: "TopPage",
-  components: {
-    Header,
-    Footer,
-    MenuTitle
-  },
-  setup() {
-    const router = useRouter();
-    // Vue Routerを使用してページ間の遷移を行うメソッド
+const title = ref(["企業理念", "事業内容", "社員紹介"]);
+const subTitle = ref(["VISION", "BUSINESS", "EMPLOYEE"]);
 
-    const goToPhilosophyPage = () => {
-      router.push({ name: "PhilosophyPage" });
-    };
+const router = useRouter();
 
-    const goToCompanyPage = () => {
-      router.push({ name: "CompanyPage" });
-    };
-
-    const goToEmployeePage = () => {
-      router.push({ name: "EmployeePage" });
-    };
-
-    const goToEmployeeDetailPage = () => {
-      router.push({ name: "EmployeeDetailPage" });
-    };
-
-    const goToAccomplishmentPage = () => {
-      router.push({ name: "AccomplishmentPage" });
-    };
-
-    const goToContactPage = () => {
-      router.push({ name: "ContactPage" });
-    };
-    return {
-      title,
-      subTitle,
-      goToPhilosophyPage,
-      goToCompanyPage,
-      goToEmployeePage,
-      goToEmployeeDetailPage,
-      goToAccomplishmentPage,
-      goToContactPage,
-    };
-
-  },
+const goToPage = (pageName) => {
+  router.push({ name: `${pageName}Page` });
 };
-</script>
+const scrollToSection = (sectionId) => {
+  const sectionElement = document.getElementById(sectionId);
+  sectionElement.scrollIntoView({ behavior: 'smooth' });
+};
 
+onMounted(() => {
+  // Scroll to the top of the window when the component is mounted
+  window.scrollTo(0, 0);
+});
+
+</script>
 <style>
+/* 基本設定 */
 .wrap {
   display: flex;
   /* height: 100vh; */
@@ -151,50 +120,146 @@ export default {
   display: none;
 }
 
-.top-hero {
-  width: 100%;
-  height: 100vh;
-  /* 変数をサポートしていないブラウザのフォールバック */
-  height: calc(var(--vh, 1vh) * 100);
-  background-image: url(./../assets/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #333333;
-}
-
-.top-imgWrap {
-  width: 100%;
-  height: auto;
-}
-
-
-.top-philosophy {
-  width: 100%;
-  height: 430px;
-  padding: 30px;
-  background-color: #b7b7b7;
-}
-
-.top-philosophy__textBox {
+.top-textBox {
   margin: 0 15px 30px;
   padding: 30px 0 0 0;
 }
 
-.top-philosophy__text {
-  font-size: 20px;
+.top-text {
+  font-size: 18px;
 }
 
-.top-philosophy__markup {
+.top-markup {
   margin-top: 10px;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   color: #1b6d92;
 }
 
+.top-read {
+  display: flex;
+  margin: 20px 10px 0 0;
+  justify-content: flex-end;
+}
+
+.top-read a {
+  text-decoration: underline;
+}
+
+.top-read p {
+  font-size: 14px;
+  letter-spacing: -0.2em;
+  cursor: pointer;
+}
+
+.top-read p:hover {
+  color: #0056b3;
+}
+
+/* ヒーローイメージ */
+.top-hero {
+  background-color: #b7b7b7;
+  padding: 0 0 10px;
+}
+
+.top-heroBackImg {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  /* 変数をサポートしていないブラウザのフォールバック */
+  height: calc(var(--vh, 1vh) * 90);
+  background-image: url(./../assets/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-logo {
+  position: absolute;
+  display: none;
+  top: 20px;
+  left: 20px;
+}
+
+.top-scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  /*矢印の動き1秒かけて永遠にループ*/
+  animation: arrowmove 1.7s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove {
+  0% {
+    bottom: -1%;
+  }
+
+  50% {
+    bottom: 2%;
+  }
+
+  100% {
+    bottom: -1%;
+  }
+}
+
+/*Scrollテキストの描写*/
+.top-scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  left: -22px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #146c94;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.top-scrolldown:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  /*矢印の形状*/
+  width: 2px;
+  height: 20px;
+  background: #146c94;
+  transform: skewX(-31deg);
+}
+
+.top-scrolldown:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*矢印の形状*/
+  width: 2px;
+  height: 60px;
+  background: #146c94;
+}
+
+
+
+/* 企業理念 */
+.top-philosophy {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #b7b7b7;
+}
+
+/* 事業内容 */
 .top-company {
   width: 100%;
-  height: 610px;
-  padding: 30px;
+  padding: 60px 20px;
   background-color: #e5e5e5;
 }
 
@@ -208,10 +273,10 @@ export default {
   object-fit: cover;
 }
 
+/* 社員紹介 */
 .top-employee {
   width: 100%;
-  height: 510px;
-  padding: 30px;
+  padding: 60px 20px;
   background-color: #b7b7b7;
 }
 
@@ -226,34 +291,11 @@ export default {
   object-position: 50% 100%;
 }
 
-.top-accomplishment {
-  width: 100%;
-  height: 500px;
-  background-color: #e5e5e5;
-}
-
+/* お問い合わせ */
 .top-contact {
   width: 100%;
-  height: auto;
-  background-color: #b7b7b7;
-}
-
-.top-title {
-  padding: 0 0 0 20px;
-}
-
-.top-read {
-  display: flex;
-  margin: 20px 10px 0 0;
-  justify-content: flex-end;
-}
-
-.top-read p {
-  font-size: 15px;
-}
-
-.top-read p:hover {
-  color: #0056b3;
+  padding: 20px 0 70px 0;
+  background-color: #e5e5e5;
 }
 
 .top-buttonWrap {
@@ -280,25 +322,35 @@ export default {
   background-color: #0056b3;
 }
 
-@media (min-width: 1181px) {
-
-  .top-companyImg,
-  .top-employeeImg {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-}
 
 @media (min-width: 1181px) {
   .main {
     width: 50%;
+  }
+
+  .top-heroBackImg {
+    width: 100%;
+    height: 95vh;
+    /* 変数をサポートしていないブラウザのフォールバック */
+    height: calc(var(--vh, 1vh) * 95);
   }
 }
 
 @media (min-width: 422px) and (max-width: 1180px) {
   .main {
     width: 100%;
+  }
+
+  .top-logo {
+    display: block;
+  }
+
+  .top-logo img {
+    max-width: 200px;
+  }
+
+  .top-contact {
+    padding: 20px 0 50px 0;
   }
 }
 
@@ -310,6 +362,14 @@ export default {
 
   .top-philosophy__markup {
     font-size: 18px;
+  }
+
+  .top-logo {
+    display: block;
+  }
+
+  .top-logo img {
+    max-width: 180px;
   }
 
   .top-read p {
