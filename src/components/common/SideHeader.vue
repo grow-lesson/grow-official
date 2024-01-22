@@ -92,7 +92,7 @@ const goToEmployeePage = () => {
 };
 
 // const goToAccomplishmentPage = () => {
-//   router.push({ name: "AccomplishmentPage" });
+//  router.push({ name: "AccomplishmentPage" });
 // };
 
 const goToContactPage = () => {
@@ -114,7 +114,7 @@ onUnmounted(() => {
   window.removeEventListener("resize", handleResize);
 });
 </script>
- 
+
 <style scoped>
 .header {
   position: fixed;
