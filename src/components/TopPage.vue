@@ -22,8 +22,8 @@
           <p class="top-markup">弊社ではエンジニアになる準備を<br>全面的に支援できる環境を整えております。</p>
         </div>
         <div class="top-read">
-          <a @click="goToPage('Philosophy')">
-            <p>ＲＥＡＤＭＯＲＥ ＞＞</p>
+          <a @click="goToPage('Philosophy')" class="top-read-text">
+            READ MORE >>
           </a>
         </div>
       </section>
@@ -39,8 +39,8 @@
           </p>
         </div>
         <div class="top-read">
-          <a @click="goToPage('Company')">
-            <p>ＲＥＡＤＭＯＲＥ ＞＞</p>
+          <a @click="goToPage('Company')" class="top-read-text">
+            READ MORE >>
           </a>
         </div>
       </section>
@@ -56,8 +56,8 @@
           </p>
         </div>
         <div class="top-read">
-          <a @click="goToPage('Employee')">
-            <p>ＲＥＡＤＭＯＲＥ ＞＞</p>
+          <a @click="goToPage('Employee')" class="top-read-text">
+            READ MORE >>
           </a>
         </div>
       </section>
@@ -154,6 +154,10 @@ onMounted(() => {
 
 .top-read p:hover {
   color: #0056b3;
+}
+
+.top-read-text {
+  letter-spacing: 1px;
 }
 
 /* ヒーローイメージ */
@@ -253,7 +257,7 @@ onMounted(() => {
 .top-philosophy {
   width: 100%;
   padding: 60px 20px;
-  background-color: #b7b7b7;
+  background-color: #d1d1d1;
 }
 
 /* 事業内容 */
@@ -277,7 +281,7 @@ onMounted(() => {
 .top-employee {
   width: 100%;
   padding: 60px 20px;
-  background-color: #b7b7b7;
+  background-color: #d1d1d1;
 }
 
 .top-employeeImg {
