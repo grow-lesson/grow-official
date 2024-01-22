@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "/grow-official/",
+  publicPath: "/",
   outputDir: "docs",
   assetsDir: "",
 }
