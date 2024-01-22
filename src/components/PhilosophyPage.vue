@@ -189,7 +189,7 @@ onMounted(() => {
 }
 .philosophy__name {
   text-align: right;
-  padding: 0 20px 100px 0;
+  padding: 0 20px 90px 0;
   font-size: 20px;
 }
 @media (min-width: 1181px) {

@@ -235,7 +235,7 @@
     align-items: center;
     height: 30px;
     margin-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
   }
 
   .pageNation-list {

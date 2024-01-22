@@ -181,6 +181,7 @@ onMounted(() => {
 .p-company {
   max-width: 100%;
   padding-top: 100px;
+  padding-bottom: 70px;
   background-color: #eae7e7;
 }
 
@@ -211,6 +212,9 @@ onMounted(() => {
   align-items: center;
   text-align: center;
   width: 100%;
+}
+.p-company__select h2 {
+  cursor: pointer;
 }
 
 .p-company__photo {
@@ -349,6 +353,12 @@ onMounted(() => {
   .main {
     width: 100%;
   }
+  .p-company {
+  max-width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #eae7e7;
+}
   .p-company__article {
   font-size: 14px;
   line-height: 2;
