@@ -3,9 +3,9 @@
     <Header />
     <main class="main">
       <section class="main__inner">
+        <MenuTitle :headingText="title" :headingSubText="subTitle" />
         <section class="philosophy__item">
           <section class="philosophy__ttl">
-            <MenuTitle :headingText="title" :headingSubText="subTitle" />
           </section>
           <section class="philosophy__txt">
             <p class="philosophy__text">
@@ -120,7 +120,7 @@ onMounted(() => {
 }
 
 .main__inner {
-  padding: 100px 20px 0;
+  padding: 100px 0px 0;
   font-size: 18px;
   line-height: 2.6;
 }
@@ -141,6 +141,9 @@ onMounted(() => {
   animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+.philosophy__item {
+  padding: 0 20px;
 }
 
 .philosophy__text {
@@ -186,7 +189,7 @@ onMounted(() => {
 }
 .philosophy__name {
   text-align: right;
-  padding: 0 20px 200px 0;
+  padding: 0 20px 100px 0;
   font-size: 20px;
 }
 @media (min-width: 1181px) {

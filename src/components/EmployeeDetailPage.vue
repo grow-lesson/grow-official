@@ -104,7 +104,6 @@ img {
 }
 
 .employeeDetail__inner {
-  /* max-width: 445px; */
   width: 100%;
   height: 100%;
   background-color: #f6f1f1;
@@ -140,8 +139,7 @@ img {
 }
 
 .employeeDetail__additionalInfo h4 {
-  font-size: 21px;
-  line-height: 2;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 30px;
   padding: 5px 10px;

@@ -21,7 +21,7 @@ const props = defineProps(['headingText','headingSubText']);
   font-weight: bold;
   padding-left: 20px;
   z-index: 10;
-  line-height: 2.7;
+  line-height: 2.4;
 }
 
 .menuSubTitle {
