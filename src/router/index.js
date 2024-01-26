@@ -40,7 +40,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("https://sub18.grow-test.com/"),
+  history: createWebHistory(),
   routes,
 });
 
