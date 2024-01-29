@@ -30,7 +30,7 @@
         </div>
         <div class="top-read">
           <a @click="goToPage('Philosophy')" class="top-read-text">
-            READ MORE >>
+            READ MORE ＞＞
           </a>
         </div>
       </section>
@@ -48,7 +48,7 @@
         </div>
         <div class="top-read">
           <a @click="goToPage('Company')" class="top-read-text">
-            READ MORE >>
+            READ MORE ＞＞
           </a>
         </div>
       </section>
@@ -66,14 +66,14 @@
         </div>
         <div class="top-read">
           <a @click="goToPage('Employee')" class="top-read-text">
-            READ MORE >>
+            READ MORE ＞＞
           </a>
         </div>
       </section>
       <section class="top-contact">
         <div class="top-buttonWrap">
           <button class="top-button" @click="goToPage('Contact')">
-            お問い合わせはコチラ
+            お問い合わせはこちら
           </button>
         </div>
       </section>
@@ -163,7 +163,7 @@ onMounted(() => {
 }
 
 .top-read p:hover {
-  color: #0056b3;
+  color: gray;
 }
 
 .top-read-text {
@@ -301,13 +301,13 @@ onMounted(() => {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
-  object-position: 50% 100%;
+  /* object-position: 50% 100%; */
 }
 
 /* お問い合わせ */
 .top-contact {
   width: 100%;
-  padding: 20px 0 70px 0;
+  padding: 20px 0 20px 0;
   background-color: #e5e5e5;
 }
 
@@ -318,8 +318,8 @@ onMounted(() => {
 }
 
 .top-button {
-  width: 200px;
-  height: 35px;
+  width: 300px;
+  height: 50px;
   padding: 2px;
   background-color: #000;
   color: white;
@@ -332,7 +332,7 @@ onMounted(() => {
 }
 
 .top-button:hover {
-  background-color: #0056b3;
+  background-color: gray;
 }
 
 @media (min-width: 1181px) {
