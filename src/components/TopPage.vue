@@ -5,9 +5,13 @@
       <div class="top-hero">
         <div class="top-heroBackImg">
           <div class="top-logo">
-            <img src="../assets/growlogo.png">
+            <img src="../assets/growlogo.png" />
           </div>
-          <div class="top-scrolldown" @click="scrollToSection('top-philosophy')"><span>Scroll</span>
+          <div
+            class="top-scrolldown"
+            @click="scrollToSection('top-philosophy')"
+          >
+            <span>Scroll</span>
           </div>
         </div>
       </div>
@@ -16,10 +20,13 @@
           <MenuTitle :headingText="title[0]" :headingSubText="subTitle[0]" />
         </section>
         <div class="top-textBox">
-          <p class="top-text">「自分の可能性に気づく経験」や「人の力」を伸ばすことが本当に「環境」に依存するものであるならば、
+          <p class="top-text">
+            「自分の可能性に気づく経験」や「人の力」を伸ばすことが本当に「環境」に依存するものであるならば、
             誰もが教育を受けられる環境が整えられるべきです。
           </p>
-          <p class="top-markup">弊社ではエンジニアになる準備を<br>全面的に支援できる環境を整えております。</p>
+          <p class="top-markup">
+            弊社ではエンジニアになる準備を<br />全面的に支援できる環境を整えております。
+          </p>
         </div>
         <div class="top-read">
           <a @click="goToPage('Philosophy')" class="top-read-text">
@@ -32,10 +39,11 @@
           <MenuTitle :headingText="title[1]" :headingSubText="subTitle[1]" />
         </section>
         <div class="top-companyImg">
-          <img src="../assets/business01.jpg">
+          <img src="../assets/business01.jpg" />
         </div>
         <div class="top-textBox">
-          <p class="top-text">弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
+          <p class="top-text">
+            弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
           </p>
         </div>
         <div class="top-read">
@@ -49,10 +57,11 @@
           <MenuTitle :headingText="title[2]" :headingSubText="subTitle[2]" />
         </section>
         <div class="top-employeeImg">
-          <img src="../assets/whole.jpg">
+          <img src="../assets/whole.jpg" />
         </div>
         <div class="top-textBox">
-          <p class="top-text">弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
+          <p class="top-text">
+            弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
           </p>
         </div>
         <div class="top-read">
@@ -63,7 +72,9 @@
       </section>
       <section class="top-contact">
         <div class="top-buttonWrap">
-          <button class="top-button" @click="goToPage('Contact')">お問い合わせはコチラ</button>
+          <button class="top-button" @click="goToPage('Contact')">
+            お問い合わせはコチラ
+          </button>
         </div>
       </section>
       <Footer />
@@ -75,8 +86,8 @@
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
 const title = ref(["企業理念", "事業内容", "社員紹介"]);
 const subTitle = ref(["VISION", "BUSINESS", "EMPLOYEE"]);
@@ -88,14 +99,13 @@ const goToPage = (pageName) => {
 };
 const scrollToSection = (sectionId) => {
   const sectionElement = document.getElementById(sectionId);
-  sectionElement.scrollIntoView({ behavior: 'smooth' });
+  sectionElement.scrollIntoView({ behavior: "smooth" });
 };
 
 onMounted(() => {
   // Scroll to the top of the window when the component is mounted
   window.scrollTo(0, 0);
 });
-
 </script>
 <style>
 /* 基本設定 */
@@ -163,7 +173,6 @@ onMounted(() => {
 /* ヒーローイメージ */
 .top-hero {
   background-color: #b7b7b7;
-  padding: 0 0 10px;
 }
 
 .top-heroBackImg {
@@ -172,9 +181,11 @@ onMounted(() => {
   height: 90vh;
   /* 変数をサポートしていないブラウザのフォールバック */
   height: calc(var(--vh, 1vh) * 90);
-  background-image: url(./../assets/hero.jpg);
+  background-image: url(./../assets/images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  height: 37.5vw;
 }
 
 .top-logo {
@@ -251,8 +262,6 @@ onMounted(() => {
   background: #146c94;
 }
 
-
-
 /* 企業理念 */
 .top-philosophy {
   width: 100%;
@@ -326,7 +335,6 @@ onMounted(() => {
   background-color: #0056b3;
 }
 
-
 @media (min-width: 1181px) {
   .main {
     width: 50%;
@@ -334,9 +342,6 @@ onMounted(() => {
 
   .top-heroBackImg {
     width: 100%;
-    height: 95vh;
-    /* 変数をサポートしていないブラウザのフォールバック */
-    height: calc(var(--vh, 1vh) * 95);
   }
 }
 
@@ -357,7 +362,12 @@ onMounted(() => {
     padding: 20px 0 50px 0;
   }
 }
-
+@media (min-width: 375px) and (max-width: 1180px) {
+  .top-heroBackImg {
+    width: 100%;
+    height: 77vw;
+  }
+}
 
 @media (max-width: 421px) {
   .top-philosophy__text {
