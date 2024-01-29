@@ -4,7 +4,7 @@
     <main class="main">
       <section class="p-company fadeUp">
         <section class="p-company__top">
-          <MenuTitle :headingText="title" :headingSubText="subTitle"/>
+          <MenuTitle :headingText="title" :headingSubText="subTitle" />
         </section>
         <div class="p-company__content">
           <section class="p-company__photo">
@@ -66,7 +66,7 @@
               <li class="p-company__item">
                 <div class="p-company__introduction">
                   <h2 class="p-company__subheading">設立</h2>
-                  <p class="p-company__detali">令和２年４月６日</p>
+                  <p class="p-company__detali">2020年4月6日</p>
                 </div>
               </li>
               <li class="p-company__item">
@@ -78,13 +78,13 @@
               <li class="p-company__item">
                 <div class="p-company__introduction">
                   <h2 class="p-company__subheading">事業概要</h2>
+                  <p class="p-company__detali">
+                    システムエンジニアリングサービス事業
+                  </p>
                   <p class="p-company__detali">Web制作</p>
                   <p class="p-company__detali">システム受託開発</p>
                   <p class="p-company__detali">
                     プログラミング学習サービス事業
-                  </p>
-                  <p class="p-company__detali">
-                    システムエンジニアリングサービス事業
                   </p>
                 </div>
               </li>
@@ -114,7 +114,7 @@
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 import MenuTitle from "@/components/common/MenuTitle.vue";
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted } from "vue";
 
 const currentPhotoIndex = ref(0);
 const title = ref("事業内容");
@@ -127,7 +127,7 @@ const photos = ref([
 ]);
 
 const titles = ref([
-  "エンジニアリングサービス",
+  "SES事業",
   "Web制作/システム開発",
   "エンジニア育成事業",
 ]);
@@ -144,8 +144,7 @@ const currentArticle = computed(() => articles.value[currentPhotoIndex.value]);
 function changeTab(direction) {
   if (direction === "prev") {
     currentPhotoIndex.value =
-      (currentPhotoIndex.value - 1 + photos.value.length) %
-      photos.value.length;
+      (currentPhotoIndex.value - 1 + photos.value.length) % photos.value.length;
   } else if (direction === "next") {
     currentPhotoIndex.value =
       (currentPhotoIndex.value + 1) % photos.value.length;
@@ -161,7 +160,6 @@ onMounted(() => {
   window.scrollTo(0, 0);
 });
 </script>
-
 
 <style>
 .wrap {
@@ -200,9 +198,7 @@ onMounted(() => {
 
 .selected-title {
   background-color: #777;
-  line-height: 50px;
   text-align: center;
-  max-height: 50px;
   color: #fff;
 }
 
@@ -215,6 +211,8 @@ onMounted(() => {
 }
 .p-company__select h2 {
   cursor: pointer;
+  border: 1px solid #777;
+  padding: 10px 0;
 }
 
 .p-company__photo {
@@ -226,7 +224,6 @@ onMounted(() => {
   line-height: 2;
   padding: 25px;
 }
-
 
 .p-company__title {
   font-size: 25px;
@@ -289,7 +286,7 @@ onMounted(() => {
 .demophoto img {
   width: 100%;
   height: 500px;
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .photo-container {
@@ -356,56 +353,56 @@ onMounted(() => {
     width: 100%;
   }
   .p-company {
-  max-width: 100%;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  background-color: #eae7e7;
-}
+    max-width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: #eae7e7;
+  }
   .p-company__article {
-  font-size: 14px;
-  line-height: 2;
-  padding: 20px;
-}
-.p-company__subheading {
-  font-weight: 900;
-  font-size: 16px;
-}
+    font-size: 14px;
+    line-height: 2;
+    padding: 20px;
+  }
+  .p-company__subheading {
+    font-weight: 900;
+    font-size: 16px;
+  }
 
-.p-company__detali {
-  padding-left: 20px;
-  font-weight: 300;
-  font-size: 14px;
-}
+  .p-company__detali {
+    padding-left: 20px;
+    font-weight: 300;
+    font-size: 14px;
+  }
 
-.p-company__item {
-  border-bottom: 1px solid #cccdce;
-  padding: 5px 0;
-}
+  .p-company__item {
+    border-bottom: 1px solid #cccdce;
+    padding: 5px 0;
+  }
 
-h2 {
-  padding: 8px 0px;
+  h2 {
+    padding: 8px 0px;
     font-size: 10px;
-}
+  }
 
-.selected-title {
-  background-color: #777;
-  line-height: 30px;
-  text-align: center;
-  max-height: 100%;
-  color: #fff;
-}
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  text-align: center;
-  line-height: 30px;
-  font-size: 25px;
-  color: #fff;
-  background-color: transparent !important;
-}
+  .selected-title {
+    background-color: #777;
+    line-height: 30px;
+    text-align: center;
+    max-height: 100%;
+    color: #fff;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    color: #fff;
+    background-color: transparent !important;
+  }
 }
 </style>

@@ -156,14 +156,13 @@ onMounted(() => {
   text-decoration: underline;
 }
 
-.top-read p {
+.top-read a {
   font-size: 14px;
-  letter-spacing: -0.2em;
   cursor: pointer;
 }
 
-.top-read p:hover {
-  color: gray;
+.top-read a:hover {
+  opacity: 0.7;
 }
 
 .top-read-text {
@@ -329,6 +328,7 @@ onMounted(() => {
   text-align: center;
   margin: auto;
   font-size: 14px;
+  transition: all 0.5s;
 }
 
 .top-button:hover {

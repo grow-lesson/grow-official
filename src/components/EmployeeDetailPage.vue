@@ -156,29 +156,24 @@ img {
 }
 
 .employeeDetail__backBtn {
-  margin-top: 20px;
+  margin-top: 45px;
+  text-align: center;
 }
 
 .employeeDetail__backBtn a {
-  background-color: #000;
-  padding: 7px 18px;
-  font-size: 14px;
-  border-radius: 3px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.employeeDetail__backBtn {
-  margin-top: 20px;
-}
-
-.employeeDetail__backBtn a {
-  background-color: #000;
-  padding: 7px 18px;
-  font-size: 14px;
-  border-radius: 3px;
-  font-weight: bold;
-  color: #fff;
+background-color: #7db4e6;
+    padding: 10px 45px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #7db4e6;
+    transition: all 0.5s;
+  }
+  .employeeDetail__backBtn a:hover {
+    background-color: #fff;
+    color: #7db4e6;
+    border: 1px solid;
 }
 
 footer {

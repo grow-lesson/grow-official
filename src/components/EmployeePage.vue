@@ -19,9 +19,9 @@
                     </div>
                     <div class="employee-work">
                       <div class="employee-joiningDayBox">
-                        <p class="employee-joiningDay">
+                        <!-- <p class="employee-joiningDay">
                           {{ employee.joiningDay }}年入社
-                        </p>
+                        </p> -->
                       </div>
                       <div class="employee-descriptionBox">
                         <p class="employee-description">
@@ -217,9 +217,9 @@
     font-size: 18px;
   }
 
-  .employee-descriptionBox {
+  /* .employee-descriptionBox {
     margin-top: 15px;
-  }
+  } */
 
   .employee-description {
     font-size: 18px;
