@@ -4,9 +4,9 @@
     <main class="main">
       <div class="top-hero">
         <div class="top-heroBackImg">
-          <div class="top-logo">
+          <!-- <div class="top-logo">
             <img src="../assets/growlogo.png" />
-          </div>
+          </div> -->
           <div
             class="top-scrolldown"
             @click="scrollToSection('top-philosophy')"
@@ -43,7 +43,7 @@
         </div>
         <div class="top-textBox">
           <p class="top-text">
-            弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
+            弊社ではシステムエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供します
           </p>
         </div>
         <div class="top-read">
@@ -61,7 +61,7 @@
         </div>
         <div class="top-textBox">
           <p class="top-text">
-            弊社ではエンジニアリングサービス、Web制作・システム開発、エンジニア育成事業を進めており、お客様のご要望に沿った最適なサービスを提供する
+            GROWは、行動力と自走力の人たちの集まりです。<br />個性や自分の人生を大事にしながらも、手を取り合い、一人では実現できない理想に挑んでいるメンバーを紹介します。
           </p>
         </div>
         <div class="top-read">
@@ -367,6 +367,9 @@ onMounted(() => {
     width: 100%;
     height: 77vw;
   }
+  .main {
+  margin-top: 64px;
+}
 }
 
 @media (max-width: 421px) {

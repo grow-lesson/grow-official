@@ -29,6 +29,9 @@
     </header>
     <div class="header-blank"></div>
     <div class="hamburger-menu">
+      <figure class="logo">
+        <img src="../../assets/logo.jpg" />
+      </figure>
       <input type="checkbox" id="menu-btn-check" />
       <label for="menu-btn-check" class="menu-btn"><span></span></label>
       <div class="menu-content">
@@ -116,6 +119,21 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+
+.hamburger-menu {
+      position: fixed;
+    z-index: 999;
+    background: white;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    padding: 0 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+  width: 50px;
+}
 .header {
   position: fixed;
   width: 555px;
@@ -180,15 +198,12 @@ onUnmounted(() => {
 }
 
 .menu-btn {
-  position: fixed;
-  top: 0;
-  right: 5px;
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  z-index: 90;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
 .menu-btn span,
