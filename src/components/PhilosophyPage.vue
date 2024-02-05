@@ -9,17 +9,11 @@
           </section>
           <section class="philosophy__txt">
             <p class="philosophy__text">
-              「どうせ無理、やっても失敗する」<br class="br-sp" />ではなく、<br/>「やったらいける！どうやろうか？」<br /><br />
-              SES業界は、全くの他業界へ出向をさせ、<br
-                class="br-sp"
-              />若い未来を潰している状況にあります。<br />
-              しかし当社の出向先はPC必須や制作案件など<br
-                class="br-sp"
-              />PCを操作する現場がほとんどです。<br /><br class="br-sp" />
+              「どうせ無理、やっても失敗する」ではなく、<br class="br-pc"/>「やったらいける！どうやろうか？」<br /><br />
+              SES業界は、全くの他業界へ出向をさせ、若い未来を潰している状況にあります。<br />
+              しかし当社の出向先はPC必須や制作案件などPCを操作する現場がほとんどです。<br /><br class="br-sp" />
               制作をこなすことで実務ベースでスキルが向上するとともに<br class="br-pc"/>
-              インプットとアウトプットを素早く行うことで<br
-                class="br-sp"
-              />習得したことを確実に定着させます。
+              インプットとアウトプットを素早く行うことで習得したことを確実に定着させます。
             </p>
             <br />
             <p class="philosophy__text--block">
@@ -58,14 +52,10 @@
           <section class="philosophy__txt--message">
             <p class="philosophy__text--message philosophy__text">
               皆様には平素よりご高配を賜り、誠にありがとうございます。<br /><br />
-              当社は2020年という新型コロナウイルス感染拡大の中で<br
-                class="br-sp"
-              />事業をスタートさせました。<br />
+              当社は2020年という新型コロナウイルス感染拡大の中で事業をスタートさせました。<br />
               以来SESの課題解決、有望な人財育成を行いつつ<br />常に柔軟な発想で事業にチャレンジしてまいりました。<br /><br />
 
-              形のないものを提供するIT・SESサービスではお客様のご要望を<br
-                class="br-sp"
-              /><br class="br-pc" />しっかりと<br
+              形のないものを提供するIT・SESサービスではお客様のご要望を<br class="br-pc" />しっかりと<br
                 class="br-tb"
               />ヒアリングすることが最適なサービスを提供することにつながります。<br /><br />
               つまり大切なのは人と人とのつながりです。<br /><br />

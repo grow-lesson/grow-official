@@ -368,11 +368,22 @@ onMounted(() => {
     height: 77vw;
   }
   .main {
-  margin-top: 64px;
-}
+    margin-top: 64px;
+  }
 }
 
 @media (max-width: 421px) {
+  .top-textBox {
+    margin: 0;
+  }
+  .top-text {
+  font-size: 16px;
+}
+
+.top-markup {
+  margin-top: 10px;
+  font-size: 18px;
+}
   .top-philosophy__text {
     font-size: 14px;
   }
