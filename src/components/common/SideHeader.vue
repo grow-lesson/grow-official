@@ -90,7 +90,7 @@ const goToCompanyPage = () => {
 
 const goToEmployeePage = () => {
   router.push({
-    name: "EmployeePage",
+    name: "EmployeePage", query: { page: 1 }
   });
 };
 
