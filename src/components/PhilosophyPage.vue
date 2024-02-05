@@ -9,16 +9,14 @@
           </section>
           <section class="philosophy__txt">
             <p class="philosophy__text">
-              「どうせ無理、やっても失敗する」<br class="br-sp" />ではなく、<br
-                class="br-sp"
-              />「やったらいける！どうやろうか？」<br /><br />
+              「どうせ無理、やっても失敗する」<br class="br-sp" />ではなく、<br/>「やったらいける！どうやろうか？」<br /><br />
               SES業界は、全くの他業界へ出向をさせ、<br
                 class="br-sp"
               />若い未来を潰している状況にあります。<br />
               しかし当社の出向先はPC必須や制作案件など<br
                 class="br-sp"
               />PCを操作する現場がほとんどです。<br /><br class="br-sp" />
-              制作をこなすことで実務ベースでスキルが向上するとともに<br />
+              制作をこなすことで実務ベースでスキルが向上するとともに<br class="br-pc"/>
               インプットとアウトプットを素早く行うことで<br
                 class="br-sp"
               />習得したことを確実に定着させます。
@@ -33,7 +31,7 @@
               />豊かで誇りある人生の実現に<br
                 class="br-tb"
               />必要であると考えております。<br /><br /><br />
-              「自分の可能性に気づく経験」や「人の力」を伸ばすことが<br />本当に環境」に依存するものであるならば、<br />
+              「自分の可能性に気づく経験」や「人の力」を伸ばすことが<br class="br-pc"/>本当に環境」に依存するものであるならば、<br class="br-pc"/>
               誰もが教育を受けられる環境が整えられるべきです。<br /><br /><span
                 style="color: #1b6d92"
                 >弊社ではエンジニアになる準備を<br
@@ -78,7 +76,7 @@
               />
               今後も「未来の人財を育てるIT企業」として世の中に<br
                 class="br-sp"
-              />貢献できるように<br />たゆまぬ努力を続けてまいります。<br /><br />
+              />貢献できるように<br class="br-pc"/>たゆまぬ努力を続けてまいります。<br /><br />
               引き続き、当社をご支援賜りますよう、<br
                 class="br-sp"
               />何卒よろしくお願い申し上げます。<br /><br />
@@ -217,6 +215,9 @@ onMounted(() => {
   .philosophy__text--block {
     font-size: 14px;
   }
+  .philosophy__text {
+  text-align: left;
+}
 }
 
 @media (max-width: 421px) {
@@ -230,7 +231,10 @@ onMounted(() => {
     font-size: 14px;
   }
   .philosophy__text--block {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .philosophy__text {
+  text-align: left;
   }
 }
 </style>

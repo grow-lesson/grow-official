@@ -30,7 +30,7 @@
     <div class="header-blank"></div>
     <div class="hamburger-menu">
       <figure class="logo">
-        <img src="../../assets/logo.jpg" />
+        <img src="../../assets/logo.png" />
       </figure>
       <input type="checkbox" id="menu-btn-check" />
       <label for="menu-btn-check" class="menu-btn"><span></span></label>

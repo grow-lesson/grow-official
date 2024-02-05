@@ -161,18 +161,18 @@ img {
 }
 
 .employeeDetail__backBtn a {
-background-color: #7db4e6;
+background-color:  #000;
     padding: 10px 45px;
     font-size: 14px;
     border-radius: 5px;
     font-weight: bold;
     color: #fff;
-    border: 1px solid #7db4e6;
+    border: 1px solid #000;
     transition: all 0.5s;
   }
   .employeeDetail__backBtn a:hover {
     background-color: #fff;
-    color: #7db4e6;
+    color: #000;
     border: 1px solid;
 }
 
