@@ -65,7 +65,7 @@ const itemsPerPage = 6; // 1ページあたりの表示数
 
 // Vue Routerを使用してページ間の遷移を行うメソッド
 const goToEmployeePage = () => {
-  const currentPageNumber = Math.ceil((Number(route.params.id) - 1) / itemsPerPage);
+  const currentPageNumber = Math.ceil((Number(route.params.id)) / itemsPerPage);
   router.push({ name: "EmployeePage", query: { page: currentPageNumber } });
 };
 
