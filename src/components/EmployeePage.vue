@@ -110,10 +110,10 @@
   const goToPage = (page) => {
     if (page >= 1 && page <= totalPages) {
       currentPage.value = page;
+      router.push({ name: "EmployeePage", query: { page: page } });
       window.scrollTo(0, 0);
     }
   };
-
 
   onMounted(() => {
     window.scrollTo(0, 0);
