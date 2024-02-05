@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view :key="$route.query.page" />
   </div>
 </template>
 
