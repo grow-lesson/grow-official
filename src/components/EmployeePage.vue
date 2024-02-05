@@ -19,9 +19,6 @@
                     </div>
                     <div class="employee-work">
                       <div class="employee-joiningDayBox">
-                        <!-- <p class="employee-joiningDay">
-                          {{ employee.joiningDay }}年入社
-                        </p> -->
                       </div>
                       <div class="employee-descriptionBox">
                         <p class="employee-description">
