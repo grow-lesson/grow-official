@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "電話番号: $phone\n";
     $body .= "お問い合わせ内容:\n$inquiry\n";
 
-    // 送信先のメールアドレスを適切なものに変更してください
-    $to = "taichi.1111@icloud.com";
+    // $to = "info@grow-infotech.com";
+		$to = "taichi.1111@icloud.com";
     $subject = "お問い合わせがありました";
-
+    
     $flg = bSENDMAIL3($to, $email, $subject, $body);
 
     if ($flg == true) {
