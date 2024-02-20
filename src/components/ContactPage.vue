@@ -74,6 +74,7 @@ const submitForm = async () => {
 
     if (response.ok) {
       const data = await response.json();
+      message.value = data.message;
       // 送信成功時の遷移先のパスを指定
       router.push({name: "SuccessPage"});
     } else {

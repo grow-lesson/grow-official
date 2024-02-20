@@ -13,6 +13,7 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
 
