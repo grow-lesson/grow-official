@@ -45,6 +45,9 @@
 import { ref, onMounted } from "vue";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const name = ref('');
 const company = ref('');
@@ -71,7 +74,8 @@ const submitForm = async () => {
 
     if (response.ok) {
       const data = await response.json();
-      message.value = data.message;
+      // 送信成功時の遷移先のパスを指定
+      router.push({name: "SuccessPage"});
     } else {
       message.value = 'お問い合わせの送信に失敗しました。';
     }

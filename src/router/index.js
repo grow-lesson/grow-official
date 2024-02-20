@@ -37,6 +37,11 @@ const routes = [
     name: "ContactPage",
     component: () => import("@/components/ContactPage.vue"),
   },
+  {
+    path: "/success",
+    name: "SuccessPage",
+    component: () => import("@/components/SuccessPage.vue"),
+  },
 ];
 
 const router = createRouter({
