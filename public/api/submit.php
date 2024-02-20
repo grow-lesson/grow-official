@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "電話番号: $phone\n";
     $body .= "お問い合わせ内容:\n$inquiry\n";
 
-    $to = "info@grow-infotech.com";
+    // $to = "info@grow-infotech.com";
+		$to = "taichi.1111@icloud.com";
     $subject = "お問い合わせがありました";
     
     $flg = bSENDMAIL3($to, $email, $subject, $body);
