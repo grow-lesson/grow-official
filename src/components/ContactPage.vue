@@ -8,8 +8,7 @@
           <p class="menuSubTitle2">CONTACT</p>
         </div>
         <div class="p-contact__inner wow animated fadeInUp">
-          <form action="https://formspree.io/f/mleqdkez" method="post" netlify>
-            <div class="p-contact__box">
+          <form @submit.prevent="submitForm">            <div class="p-contact__box">
               <label for="name">お名前</label>
               <input type="text" id="name" name="name" required />
             </div>
@@ -33,6 +32,7 @@
               <button type="submit">送信</button>
             </div>
           </form>
+          <div v-if="message">{{ message }}</div>
         </div>
       </section>
       <Footer />
@@ -41,14 +41,53 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { ref,onMounted } from "vue";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
+
+
+const name = ref('');
+const company = ref('');
+const email = ref('');
+const phone = ref('');
+const inquiry = ref('');
+const message = ref('');
+
+const submitForm = async () => {
+  try {
+    const response = await fetch('/api/contact.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        name: name.value,
+        company: company.value,
+        email: email.value,
+        phone: phone.value,
+        inquiry: inquiry.value,
+      }),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      message.value = data.message;
+    } else {
+      message.value = 'お問い合わせの送信に失敗しました。';
+    }
+  } catch (error) {
+    console.error('エラー:', error);
+    message.value = 'エラーが発生しました。';
+  }
+};
 
 onMounted(() => {
   // Scroll to the top of the window when the component is mounted
   window.scrollTo(0, 0);
 });
+
+
+
 </script>
 
 <style>
