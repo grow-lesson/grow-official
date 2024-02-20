@@ -8,25 +8,26 @@
           <p class="menuSubTitle2">CONTACT</p>
         </div>
         <div class="p-contact__inner wow animated fadeInUp">
-          <form @submit.prevent="submitForm">            <div class="p-contact__box">
+          <form @submit.prevent="submitForm">
+            <div class="p-contact__box">
               <label for="name">お名前</label>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" v-model="name" required />
             </div>
             <div class="p-contact__box">
               <label for="company">企業名</label>
-              <input type="text" id="company" name="company" />
+              <input type="text" id="company" name="company" v-model="company" />
             </div>
             <div class="p-contact__box">
               <label for="email">メールアドレス</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" v-model="email" required />
             </div>
             <div class="p-contact__box">
               <label for="phone">電話番号</label>
-              <input type="tel" id="phone" name="phone" />
+              <input type="tel" id="phone" name="phone" v-model="phone" />
             </div>
             <div class="p-contact__box">
               <label for="inquiry">お問い合わせ内容</label>
-              <textarea id="inquiry" name="inquiry" required></textarea>
+              <textarea id="inquiry" name="inquiry" v-model="inquiry" required></textarea>
             </div>
             <div class="p-contact__submit">
               <button type="submit">送信</button>
@@ -41,10 +42,9 @@
 </template>
 
 <script setup>
-import { ref,onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import Header from "@/components/common/SideHeader.vue";
 import Footer from "@/components/common/Footer.vue";
-
 
 const name = ref('');
 const company = ref('');
@@ -85,10 +85,8 @@ onMounted(() => {
   // Scroll to the top of the window when the component is mounted
   window.scrollTo(0, 0);
 });
-
-
-
 </script>
+
 
 <style>
 /* .bg {
