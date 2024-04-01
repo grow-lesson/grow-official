@@ -4,7 +4,7 @@ const employees = [
     name: "松原 勇志",
     joiningDay: "2021",
     position: "エンジニア",
-    image: "matsubara.jpeg",
+    image: "matsubara.png",
     introduce: "GROW × 自分 = Infinity(無限大)",
     joiningReason:
       "「未経験からエンジニアを目指せる」と銘打った企業はいくつもありましたが、その中で起業したてでありながらも、代表の方やすでに働きはじめている仲間がIT分野のみならず、多方面に活躍している話を受け、自由さとより大きなビジョンを見せてくれる会社だと感じたので、入社をしました。",
@@ -20,7 +20,7 @@ const employees = [
     name: "田丸 太一",
     joiningDay: "2022",
     position: "エンジニア",
-    image: "tamaru.jpeg",
+    image: "tamaru.png",
     introduce: "自分が生きた証が誰かの糧になれる、後悔のない人生に",
     joiningReason:
       "周りの誰よりも大学を卒業してからの人生に不安と葛藤がありました。ただ漠然と誰かに敷かれたレールの上を走り、可もなく不可もない普通の人生で終わりたくないという想いから未経験からでも常に挑戦ややりがいのある企業を探していました。GROWは井上代表をはじめ、すでに入社している仲間が自由に活動し、自分の挑戦したい夢や目標を持ち続けているところに魅力を感じ入社を決断いたしました。",
@@ -53,7 +53,7 @@ const employees = [
     name: "原田 和也",
     joiningDay: "2021",
     position: "エンジニア",
-    image: "harada.jpeg",
+    image: "harada.png",
     introduce: "適切な選択ができるエンジニアを目指しています",
     joiningReason:
       "GROWには教育カリキュラムが充実しており、私自身スキルアップをしていきたいと思い入社を決めました。",
@@ -83,7 +83,7 @@ const employees = [
     name: "松永 卓也",
     joiningDay: "2022",
     position: "エンジニア",
-    image: "matsunaga.jpeg",
+    image: "matsunaga.png",
     introduce: "未経験でもエンジニアになれることを身をもって証明していきます！",
     joiningReason:
       "友人がGROWで自分のやりたいことを仕事にしていることに憧れて自分を変えるために入社を決意しました。",
@@ -99,7 +99,7 @@ const employees = [
     name: "山岸 陸斗",
     joiningDay: "2022",
     position: "エンジニア",
-    image: "yamagishi.jpeg",
+    image: "yamagishi.png",
     introduce: "信頼されるバックエンドエンジニアを目指してます",
     joiningReason:
       "私がGROWを選んだ主な理由は、自分の力次第で様々なことに挑戦し、成長することができると思ったからです。",
@@ -115,7 +115,7 @@ const employees = [
     name: "北澤 弦太",
     joiningDay: "2023",
     position: "エンジニア",
-    image: "kitazawa.jpeg",
+    image: "kitazawa.png",
     introduce: "窮すれば通ず",
     joiningReason: "私には、どんな業界でもいまや必須の「IT」という分野で優れたサービスやシステムを自分自身の手で作り出したいという思いがあり、SEを目指すべく入社しました。未経験で、なおかつ、全く違う建設業という業界からの転職だったので、とにかく技術を吸収し成長させてくれる企業を探しておりました。そんな中、GROWに出会い、面接等を通じ「デビューすること」に重きに置いていること、エンジニアになる準備を全面的に支援できる体制が整ってることを感じ、入社の決め手になりました。",
     motivation: "私のやりたいことができることです。もちろん全て叶うというわけではありませんが、月1回の1on1面談や、営業担当との細かなヒアリングから、どういう方向性に向かいたいのか、そのために必要な物は何なのか、という指針を定めそれに向かって進める事です。",
@@ -127,7 +127,7 @@ const employees = [
     name: "高橋 有希",
     joiningDay: "2023",
     position: "エンジニア",
-    image: "takahashi.jpeg",
+    image: "takahashi.png",
     introduce: `為せば成る
     為さねば成らぬ何事も`,
     joiningReason:
@@ -144,7 +144,7 @@ const employees = [
     name: "藤井 優子",
     joiningDay: "2023",
     position: "エンジニア",
-    image: "fujii.jpeg",
+    image: "fujii.png",
     introduce: "好きなことを全力で",
     joiningReason:
       "自分の持っている専門知識を活用した機械学習やアプリを作りたいと思い、エンジニアを志しました。内定前にGROWの仲間と話す機会を設けていただいて、お話しをする中で信頼できる会社だと思ったのを覚えています。入社時に「やりたいことはどんどん発言して、チャレンジして欲しい！」と言っていただいたことが入社の決め手になりました。",
@@ -160,7 +160,7 @@ const employees = [
     name: "土屋 暖乃",
     joiningDay: "2023",
     position: "エンジニア",
-    image: "tuchiya.jpeg",
+    image: "tsuchiya.png",
     introduce: "学ぶ事を怠らないエンジニアを目指してます！",
     joiningReason:
       "自分に何かスキルを身につけたくて、前々から興味があったIT系企業の面接をいくつか受けましたが、GROWは1番印象に残る面接でした。SE知識ゼロでも1から学べる、何を学ぶのも自由なところに惹かれて入社しました。",
@@ -176,7 +176,7 @@ const employees = [
     name: "佐々木 凌",
     joiningDay: "2022",
     position: "エンジニア ※弊社子会社所属",
-    image: "sasakiryo.jpeg",
+    image: "sasakiryo.png",
     introduce: "癖の強いエンジニアを目指しています！",
     joiningReason:
       "前職の時にコロナの影響を受けたのがITとの出会いでした。当時Web広告などで「アプリ開発」が出ておりどうやって作るんだろうと思い、プロゲートなどの学習サイトを触っていくうちに、それまでのIT業界に抱いてた漠然としたイメージが払拭され、ITに魅了されていきました。そして、転職活動中に井上代表と出会い、GROWなら初心者からでもエンジニアを目指せると伺い入社を決めました。",
@@ -192,7 +192,7 @@ const employees = [
     name: "福井 涼太",
     joiningDay: "2021",
     position: "エンジニア ※弊社子会社所属",
-    image: "fukui.jpeg",
+    image: "fukui.png",
     introduce: "自分の強みややりたいことを常に探求していきたい",
     joiningReason: "もともとIT系の業界に興味があり、モダンな環境に身を置きたいという思いがあったので東京に上京をしました。多くの企業と面接していく中で、GROWは自分のやりたいことやどのように成長していきたいかをしっかり聞いてサポートをしてくれるという印象があったため、入社を決めました。また対面で面談をした際にも実際に働いているエンジニアの仲間とお話しできたことも入社を決める要因になりました。",
     motivation: "自分は現在サーバー構築の業務を行っているので直接作成したアプリを見たり、顧客と顔を合わせるということもないのですが、それでも開発チームが作業する環境を整えたり、インフラの経験がない中自分で調べてチームメンバーの役に立てた時にやりがいを感じます。",
@@ -204,7 +204,7 @@ const employees = [
     name: "金森 翔",
     joiningDay: "2023",
     position: "エンジニア ※業務委託",
-    image: "kanamori.jpg",
+    image: "kanamori.png",
     introduce: "多角的に見てベストなコーディングを意識しています",
     joiningReason:
       "今後のキャリアについて悩んでいた時に、お声がけをいただきました。エンジニアとして活躍しながら、自分のやりたいこととの親和性があり、2軸で活動できているところです。",
@@ -220,7 +220,7 @@ const employees = [
     name: "東 一虎",
     joiningDay: "2021",
     position: "ディレクター",
-    image: "higashi.jpg",
+    image: "higashi.png",
     introduce: "小さな改善の積み重ねが会社全体の重要な生産性を生み出す",
     joiningReason:
       "代表のお人柄や社名「GROW」に込められた想い、SESのため職場環境を変えやすいことに魅力を感じ入社しました。特に代表から「自分が会社で儲けようとは思っていない。若い人が自社で成長してステップアップしていってもらいたい」とお聞きしたことが大きな動機になりました。",
