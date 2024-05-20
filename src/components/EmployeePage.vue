@@ -6,7 +6,6 @@
         <div class="employee-head">
           <MenuTitle :headingText="title" :headingSubText="subTitle" />
         </div>
-
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
@@ -122,6 +121,18 @@
     display: flex;
   }
 
+  .employee{
+    min-height: calc(100vh - 50px);
+  }
+
+  .employee-mainInner{
+    min-height: calc(100vh - 50px);
+  }
+
+  .employee-list{
+    padding-bottom: 160px;
+  }
+
   @media (max-width: 1179px) {
     .main {
       width: 100%;
@@ -227,12 +238,11 @@
   }
 
   .pageNation-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    margin-top: 60px;
-    padding-bottom: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 60px;
   }
 
   .pageNation-list {
