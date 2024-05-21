@@ -159,7 +159,7 @@ const employees = [
     id: 11,
     name: "佐々木 凌",
     joiningDay: "2022",
-    position: "エンジニア ※弊社子会社所属",
+    position: "エンジニア",
     image: "sasakiryo.png",
     introduce: "癖の強いエンジニアを目指しています！",
     joiningReason:
@@ -175,7 +175,7 @@ const employees = [
     id: 12,
     name: "福井 涼太",
     joiningDay: "2021",
-    position: "エンジニア ※弊社子会社所属",
+    position: "エンジニア",
     image: "fukui.png",
     introduce: "自分の強みややりたいことを常に探求していきたい",
     joiningReason: "もともとIT系の業界に興味があり、モダンな環境に身を置きたいという思いがあったので東京に上京をしました。多くの企業と面接していく中で、GROWは自分のやりたいことやどのように成長していきたいかをしっかり聞いてサポートをしてくれるという印象があったため、入社を決めました。また対面で面談をした際にも実際に働いているエンジニアの仲間とお話しできたことも入社を決める要因になりました。",
