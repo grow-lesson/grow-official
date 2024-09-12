@@ -9,7 +9,7 @@
         <div class="employee-main">
           <div class="employee-mainInner">
             <ul class="employee-list">
-              <li v-for="(employee, index) in displayedEmployees" :key="index"
+              <li v-for="employee in displayedEmployees" :key="employee.id"
                 class="employee-item wow animated fadeInUp">
                 <a @click="goToEmployeeDetailPage(employee)" class="employee-link">
                   <div class="employee-profile">
