@@ -86,6 +86,8 @@
                   <p class="p-company__detali">
                     プログラミング学習サービス事業
                   </p>
+                  <p class="p-company__detali">インフラ事業</p>
+                  <p class="p-company__detali">通信事業</p>
                 </div>
               </li>
             </ul>
@@ -126,11 +128,7 @@ const photos = ref([
   { src: require("@/assets/business03.jpg"), alt: "写真3" },
 ]);
 
-const titles = ref([
-  "SES事業",
-  "Web制作/システム開発",
-  "エンジニア育成事業",
-]);
+const titles = ref(["SES事業", "Web制作/システム開発", "エンジニア育成事業"]);
 
 const articles = ref([
   "即戦力となるエンジニアをお客様の悩みに沿ってマッチングを行うサービスです。 短期間から長期間までお客様のニーズに合わせて、適材適所のエンジニアを提供いたします。 お気軽にお問い合せ頂ければ、ヒアリングをさせて頂き、ご要望にあった人材を提供させていただきます。",
@@ -408,10 +406,9 @@ onMounted(() => {
   }
 
   .demophoto img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 </style>
