@@ -57,9 +57,16 @@
               <li class="p-company__item">
                 <div class="p-company__introduction">
                   <h2 class="p-company__subheading">住所</h2>
+                  <p class="p-company__detali">本社</p>
                   <p class="p-company__detali">〒150-0002</p>
                   <p class="p-company__detali">
                     東京都渋谷区渋谷 1-11-3 第一小山ビル 6F
+                  </p>
+                  <br />
+                  <p class="p-company__detali">名古屋営業所</p>
+                  <p class="p-company__detali">〒464-0067</p>
+                  <p class="p-company__detali">
+                    愛知県名古屋市千種区池下1-6-20 チサンマンション池下403
                   </p>
                 </div>
               </li>
